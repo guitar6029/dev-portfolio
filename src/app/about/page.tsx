@@ -31,7 +31,7 @@ export default function About() {
 
 
   return (
-    <div className="flex flex-col  justify-between min-h-screen">
+    <div className="flex flex-col  justify-between min-h-screen animate-slide-in-right">
       <div className="relative flex flex-col gap-2 p-4">
       <h1 className="text-4xl font-bold text-amber-400 underline">
           About Me
