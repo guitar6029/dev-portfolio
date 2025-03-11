@@ -1,6 +1,6 @@
-import Hero from "../../components/Hero/Hero";
+import Hero from "../components/Hero/Hero";
 import { roles } from "../../data/roles";
-import MovingQueue from "../../components/Slider/MovingQueue";
+import MovingQueue from "../components/Slider/MovingQueue";
 
 export default function Home() {
   return (

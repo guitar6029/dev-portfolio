@@ -1,6 +1,6 @@
 "use client";
 import {useState, useEffect} from 'react';
-import Wave from "../../../components/Wave/Wave";
+import Wave from "../../components/Wave/Wave";
 
 
 const roles : string[]  = [
