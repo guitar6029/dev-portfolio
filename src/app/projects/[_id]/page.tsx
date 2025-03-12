@@ -47,7 +47,7 @@ export default async function Project({ params }: { params: Promise<{ _id: strin
             target="_blank"
             className="text-black w-[100%] md:w-[15rem] font-bold text-center rounded-xl p-3 bg-amber-50 hover:bg-amber-500 transition duration-300 ease-in"
           >
-            Take a look
+            Live Preview
           </a>
         )}
       </div>
