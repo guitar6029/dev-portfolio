@@ -12,7 +12,7 @@ export default async function Projects() {
     .toArray();
 
   return (
-    <div className="min-h-screen flex flex-col p-4">
+    <div className="min-h-screen mt-5 flex flex-col p-4">
       <h1 className="text-6xl font-bold text-amber-400 underline">Projects</h1>
       <div className="mt-6 flex flex-row flex-wrap gap-4">
         {projects.map((project, index) => (

@@ -26,7 +26,7 @@ export default function About() {
   }, [roleIndex]);
 
   return (
-    <div className="flex flex-col min-h-screen justify-center animate-slide-in-right">
+    <div className="flex flex-col min-h-screen mt-5 animate-slide-in-right">
       <div className="flex flex-col gap-2 p-4">
         <h1 className="text-6xl font-bold text-amber-400 underline">
           About Me
