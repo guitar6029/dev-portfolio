@@ -1,6 +1,5 @@
 "use client";
 import { useState, useEffect } from "react";
-import Wave from "../../components/Wave/Wave";
 
 const roles: string[] = [
   "Full Stack Developer",
@@ -27,9 +26,9 @@ export default function About() {
   }, [roleIndex]);
 
   return (
-    <div className="flex flex-col  justify-between min-h-screen animate-slide-in-right">
+    <div className="flex flex-col min-h-screen justify-center animate-slide-in-right">
       <div className="relative flex flex-col gap-2 p-4">
-        <h1 className="text-4xl font-bold text-amber-400 underline">
+        <h1 className="text-6xl font-bold text-amber-400 underline">
           About Me
         </h1>
         <p className="text-2xl mt-5">
@@ -54,16 +53,16 @@ export default function About() {
           teams to solve complex problems, enhance product scalability, and
           deliver impactful solutions.
         </p>
-        <div className="flex flex-row gap-4 mt-4">
+        <div className="flex flex-col md:flex-row gap-4 mt-4">
           <a
-            className="text-2xl p-3 rounded-xl bg-amber-50 text-black"
+            className="text-2xl p-3 md:w-[15rem] md:text-center rounded-xl bg-amber-50 text-black"
             href="https://www.linkedin.com/in/joshsoll/"
             target="_blank"
           >
             Linkedin
           </a>
           <a
-            className="text-2xl p-3 rounded-xl  bg-amber-50 text-black"
+            className="text-2xl p-3 rounded-xl md:w-[15rem] md:text-center bg-amber-50 text-black"
             href="https://github.com/guitar6029"
             target="_blank"
           >
@@ -71,7 +70,7 @@ export default function About() {
           </a>
         </div>
       </div>
-      <Wave bgColor="#f59e0b" />
+     
     </div>
   );
 }
