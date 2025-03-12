@@ -13,13 +13,13 @@ export default function About() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      //change the role index every 3 seconds
+      //change the role index every 4 seconds
       if (roleIndex === roles.length - 1) {
         setRoleIndex(0);
       } else {
         setRoleIndex(roleIndex + 1);
       }
-    }, 10000);
+    }, 4000);
 
     //clean up
     return () => clearInterval(interval);

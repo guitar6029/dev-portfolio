@@ -6,9 +6,11 @@ export const roles : string[] = [
     "UI/UX Designer",
     "Tech Enthusiast",
     "Problem Solver",
+    "Professional Debugger",
     "Guitar Player",
     "Movie Buff",
     "Book Worm",
     "Curious Mind",
+    "Foodie",
     "Lifelong Learner",
 ]

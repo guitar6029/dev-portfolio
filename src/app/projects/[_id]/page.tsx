@@ -21,7 +21,8 @@ export default async function Project({ params }: { params: { _id: string } }) {
   if (!project) return <h1>Project not found</h1>;
 
   return (
-    <div className="min-h-screen p-4 flex flex-col gap-3">
+    <div className="min-h-screen p-4 flex flex-col gap-3 animate-slide-in-right">
+      
       <div className="flex flex-col gap-5">
         <h1 className="text-4xl font-bold text-amber-400 underline">
           {project.title}
@@ -36,9 +37,9 @@ export default async function Project({ params }: { params: { _id: string } }) {
           ))}
         </ul>
         <a
-          href={project.github} // Corrected href for GitHub link
+          href={project.github} 
           target="_blank"
-          className="text-black font-bold text-center rounded-xl p-3 bg-amber-50 hover:bg-amber-500 transition duration-300 ease-in"
+          className="text-black w-[100%] md:w-[15rem] font-bold text-center rounded-xl p-3 bg-amber-50 hover:bg-amber-500 transition duration-300 ease-in"
         >
           Github Repo
         </a>
@@ -46,7 +47,7 @@ export default async function Project({ params }: { params: { _id: string } }) {
           <a
             href={project.preview}
             target="_blank"
-            className="text-black font-bold text-center rounded-xl p-3 bg-amber-50 hover:bg-amber-500 transition duration-300 ease-in"
+            className="text-black w-[100%] md:w-[15rem] font-bold text-center rounded-xl p-3 bg-amber-50 hover:bg-amber-500 transition duration-300 ease-in"
           >
             Take a look
           </a>
