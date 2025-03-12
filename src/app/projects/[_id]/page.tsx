@@ -1,19 +1,18 @@
 import { connectToDatabase } from "@/lib/mongodb";
 import { ObjectId } from "mongodb";
 
-// The params object should be awaited before use.
-export default async function Project({ params }: { params: { _id: string } }) {
-  // Awaiting params if it's a Promise.
+export default async function Project({ params }: { params: Promise<{ _id: string }> }) {
+  // ✅ Await the params object correctly
   const resolvedParams = await params;
 
-  // Ensure that the resolved params._id exists
+  // Ensure the resolvedParams._id is valid
   if (!resolvedParams._id || !ObjectId.isValid(resolvedParams._id)) {
     return <h1>Error: Invalid Project ID</h1>;
   }
 
   const { db } = await connectToDatabase();
 
-  // Find the project using the valid ObjectId
+  // Fetch project from the database
   const project = await db
     .collection("github-projects")
     .findOne({ _id: new ObjectId(resolvedParams._id) });
@@ -22,7 +21,6 @@ export default async function Project({ params }: { params: { _id: string } }) {
 
   return (
     <div className="min-h-screen p-4 flex flex-col gap-3 animate-slide-in-right">
-      
       <div className="flex flex-col gap-5">
         <h1 className="text-4xl font-bold text-amber-400 underline">
           {project.title}
