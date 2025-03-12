@@ -1,14 +1,14 @@
 import { MongoClient, Db } from "mongodb";
 
 // Ensure the MongoDB URI is provided
-if (!process.env.MONGO_URI) {
+if (!process.env.MONGODB_URI) {
   throw new Error(
     "Please define the MONGODB_URI environment variable in your .env file"
   );
 }
 
 // this is the new connection URI for the mongodb stored in the env variable
-const client = new MongoClient(process.env.MONGO_URI as string);
+const client = new MongoClient(process.env.MONGODB_URI as string);
 
 let cachedClient: MongoClient | null = null;
 let cachedDb: Db | null = null;
