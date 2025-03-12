@@ -24,7 +24,7 @@ html {
 }
 
 body {
-  background: var(--background);
+  background: linear-gradient(45deg, #0b0b0b 0%, #242323 100%);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
   overflow-x: hidden;

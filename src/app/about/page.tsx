@@ -27,7 +27,7 @@ export default function About() {
 
   return (
     <div className="flex flex-col min-h-screen justify-center animate-slide-in-right">
-      <div className="relative flex flex-col gap-2 p-4">
+      <div className="flex flex-col gap-2 p-4">
         <h1 className="text-6xl font-bold text-amber-400 underline">
           About Me
         </h1>
@@ -55,14 +55,14 @@ export default function About() {
         </p>
         <div className="flex flex-col md:flex-row gap-4 mt-4">
           <a
-            className="text-2xl p-3 md:w-[15rem] md:text-center rounded-xl bg-amber-50 text-black"
+            className="text-2xl p-3 md:w-[15rem] md:text-center rounded-xl bg-amber-50 text-black hover:bg-amber-500 transition duration-300 ease-in"
             href="https://www.linkedin.com/in/joshsoll/"
             target="_blank"
           >
             Linkedin
           </a>
           <a
-            className="text-2xl p-3 rounded-xl md:w-[15rem] md:text-center bg-amber-50 text-black"
+            className="text-2xl p-3 rounded-xl md:w-[15rem] md:text-center bg-amber-50 text-black hover:bg-amber-500 transition duration-300 ease-in"
             href="https://github.com/guitar6029"
             target="_blank"
           >
@@ -70,7 +70,6 @@ export default function About() {
           </a>
         </div>
       </div>
-     
     </div>
   );
 }
