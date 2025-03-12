@@ -17,7 +17,6 @@ let cachedDb: Db | null = null;
 export async function connectToDatabase() {
   //if already cached, return the cached db
   if (cachedClient && cachedDb) {
-    console.log("Using cached database connection");
     return { client: cachedClient, db: cachedDb };
   }
 
@@ -26,9 +25,6 @@ export async function connectToDatabase() {
 
   // get the db
   const db = client.db("portfolio");
-
-  console.log("Successfully connected to database:", db.databaseName);
-
   // Check if the collection exists
   const collections = await db.listCollections().toArray();
   const collectionNames = collections.map((col) => col.name);
