@@ -2,7 +2,7 @@ import Link from "next/link";
 import { CornerDownLeft } from "lucide-react";
 export default function Hero() {
   return (
-    <div className="relative h-fit  flex flex-col animate-slide-in-right transiiton duration-400 ease-in">
+    <div className="relative h-fit flex flex-col items-center justify-center animate-slide-in-right transiiton duration-400 ease-in">
       <div className="w-fit p-4 mt-5 flex flex-col gap-4">
         <h1 className="text-4xl md:text-6xl font-bold">Hey, I&apos;m <span className="bg-animate opacity-0">Josh</span></h1>
         <div>

@@ -1,9 +1,19 @@
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 
+
+/* Light tokens (default) */
 :root {
   --background: #ffffff;
   --foreground: #171717;
 }
+
+/* Dark tokens when <html class="dark"> */
+html.dark {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+}
+
 
 @theme inline {
   --color-background: var(--background);
@@ -24,11 +34,27 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
+/* body {
   background: linear-gradient(45deg, #0b0b0b 0%, #242323 100%);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
   overflow-x: hidden;
+} */
+
+body {
+  /* 🌓 Dark mode (default look) */
+  background: linear-gradient(45deg, #0b0b0b 0%, #242323 100%);
+  color: var(--foreground, #ededed);
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+/* 🌞 Light mode override */
+@media (prefers-color-scheme: light) {
+  body {
+    background: linear-gradient(45deg, #f9fafb 0%, #e5e7eb 100%);
+    color: var(--foreground, #171717);
+  }
 }
 
 @keyframes slide-in-left {
@@ -103,7 +129,6 @@ body {
   }
 }
 
-
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -112,8 +137,6 @@ body {
     opacity: 1;
   }
 }
-
-
 
 /* Global scrollbar styles */
 ::-webkit-scrollbar {
@@ -156,8 +179,7 @@ body {
   }
 }
 
-
-.bg-animate{
+.bg-animate {
   animation: appear 1s ease-in-out forwards 1s;
- transition: all ease 0.5s;
+  transition: all ease 0.5s;
 }
