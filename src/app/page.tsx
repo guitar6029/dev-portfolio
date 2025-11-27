@@ -57,10 +57,12 @@ export default function Home() {
         <div className="absolute h-6 w-6 bg-(--blue) top-220 right-60 z-1"></div>
 
         <div className="z-10 flex flex-col items-center justify-center gap-6">
-          <h1 className="text-8xl font-space">Skills</h1>
+          <h1 className="text-8xl font-space trns hover:text-(--blue)">
+            Skills
+          </h1>
           {TECH.map((techItem: SkillTech, index: number) => {
             return (
-              <div key={index} className="flex flex-col items-center gap-2">
+              <div key={index} className="flex flex-col items-center gap-6">
                 <span className="text-4xl text-(--blue)">{techItem.title}</span>
                 <div className="flex flex-row items-center justify-center gap-4">
                   {techItem.stack.map((item: string, idx: number) => {
