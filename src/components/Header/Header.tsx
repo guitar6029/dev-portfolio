@@ -2,44 +2,41 @@
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 
+const ROUTES = [
+  { id: 1, to: "/", label: "Home" },
+  { id: 2, to: "/portfolio", label: "Portfolio" },
+  { id: 3, to: "/about", label: "About" },
+];
+
 export default function Header() {
   const pathName = usePathname();
-  return (
-    <header>
-      <div className="flex flex-row items-center justify-between bg-neutral-900 ">
-        <div className="flex flex-row items-center gap-2">
-          <Link
-            href="/"
-            className={`sm:text-xl md:text-2xl p-3 hover:text-black transition duration-300 ease-in ${
-              pathName === "/"
-                ? "bg-amber-300 text-black"
-                : "hover:bg-amber-500"
-            }`}
-          >
-            Home
-          </Link>
-          <Link
-            href="/portfolio"
-            className={`sm:text-xl md:text-2xl p-3  hover:text-black transition duration-300 ease-in ${
-              pathName.startsWith("/portfolio")
-                ? "bg-amber-300 text-black"
-                : "hover:bg-amber-500"
-            }`}
-          >
-            Portfolio
-          </Link>
-          <Link
-            href="/about"
-            className={`sm:text-xl md:text-2xl p-3  hover:text-black transition duration-300 ease-in ${
-              pathName === "/about"
-                ? "bg-amber-300 text-black"
-                : "hover:bg-amber-500"
-            }`}
-          >
-            About
-          </Link>
-        </div>
 
+  const isRouteActive = (to: string) => {
+    return to === "/" ? pathName === "/" : pathName.startsWith(to);
+  };
+
+  return (
+    <header className="sticky top-0">
+      <div className="flex flex-row items-center justify-between">
+        <div className="flex flex-row items-center gap-2">
+          {ROUTES.map((route) => {
+            const isActive = isRouteActive(route.to);
+
+            return (
+              <Link
+                key={route.id}
+                href={route.to}
+                className={`sm:text-xl md:text-2xl p-3 transition duration-300 ease-in ${
+                  isActive
+                    ? "bg-(--bg-panel) text-(--blue)"
+                    : "hover:bg-(--bg-hover)"
+                }`}
+              >
+                {route.label}
+              </Link>
+            );
+          })}
+        </div>
       </div>
     </header>
   );

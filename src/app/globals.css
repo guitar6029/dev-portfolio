@@ -1,44 +1,36 @@
 @import "tailwindcss";
-@import './animations.css';
+@import "./animations.css";
 
 :root {
-  /* ---- Core Neutral Palette ---- */
-  --metal-900: #0d0f10; /* near-black carbon */
-  --metal-800: #1a1c1f; /* deep gunmetal */
-  --metal-700: #2a2d31; /* graphite */
-  --metal-600: #3a3e44; /* dark steel */
-  --metal-500: #4a4f58; /* steel gray */
-  --metal-400: #5c616b; /* brushed metal */
-  --metal-300: #7a808a; /* anodized gray */
-  --metal-200: #9aa1ac; /* cool alloy */
-  --metal-100: #c6ccd4; /* light steel */
+  /* ---- Carbon Base ---- */
+  --bg: #030507;
+  --bg-panel: #0b0f14;
 
-  /* ---- Neutral Text ---- */
-  --text-main: #e5e7eb; /* soft white gray */
-  --text-muted: #9ca3af; /* muted gray */
-  --text-accent: #d1d5db; /* mid-white */
+   --bg-hover: #111825;      /* subtle hover background */
+  --bg-hover-strong: #1a2335;  /* stronger hover when needed */
 
-  /* ---- Subtle Accent (Industrial LED) ---- */
-  --accent: #7f8cff; /* muted steel-blue glow */
-  --accent-soft: #6976e6; /* softened version */
-  --accent-glow: rgba(127, 140, 255, 0.25); /* shadow glow */
+  /* ---- Text ---- */
+  --text: #e5e7ea;
+  --text-muted: #98a0a8;
 
-  /* ---- Secondary Amber Accent (optional) ---- */
-  --amber: #d4a55a; /* metallic warm light */
-  --amber-soft: #b88d49;
-  --amber-glow: rgba(212, 165, 90, 0.2);
+  /* ---- Neon Blue (Primary) ---- */
+  --blue: #4cb1ff; /* main neon */
+  --blue-glow: rgba(76, 177, 255, 0.35);
+  --blue-soft: #2f8bd8; /* softer */
 
-  /* ---- Surfaces ---- */
-  --surface-1: var(--metal-900);
-  --surface-2: var(--metal-800);
-  --surface-3: var(--metal-700);
+  /* ---- Neon Red (Secondary) ---- */
+  --red: #ff3b61; /* main neon red */
+  --red-glow: rgba(255, 59, 97, 0.35);
+  --red-soft: #e02d52;
 
-  /* ---- Borders & Shadows ---- */
-  --border-color: rgba(255, 255, 255, 0.06);
-  --border-strong: rgba(255, 255, 255, 0.12);
+  /* ---- Borders ---- */
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.18);
 
-  --shadow-soft: 0 0 20px rgba(0, 0, 0, 0.3);
-  --shadow-accent: 0 0 20px var(--accent-glow);
+  /* ---- Shadows ---- */
+  --shadow-soft: 0 0 24px rgba(0, 0, 0, 0.4);
+  --shadow-blue: 0 0 26px var(--blue-glow);
+  --shadow-red: 0 0 26px var(--red-glow);
 }
 
 /* Utility Classes */
@@ -46,7 +38,6 @@
   .trns {
     @apply transition ease-in-out duration-300;
   }
-
 }
 
 html {
@@ -54,6 +45,13 @@ html {
   scroll-behavior: smooth;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* Next/font helpers */
 .font-space {
   font-family: var(--font-spacejaeger);
 }
@@ -63,12 +61,17 @@ html {
 }
 
 body {
-  background: linear-gradient(45deg, #0b0b0b 0%, #242323 100%);
-  color: var(--foreground, #ededed);
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(circle at 20% 20%, #0b0f15 0%, #030507 100%);
+  color: var(--text);
   overflow-x: hidden;
+  /* Optional generic fallback if no font class is applied */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
 }
 
-
+/* Fade mask for scrolling content */
 .fadeout-horizontal {
   mask-image: linear-gradient(
     to right,
@@ -79,9 +82,10 @@ body {
   );
 }
 
+/* Marquee / scroll text */
 .wrapper {
-  padding: 4.5rem 0px;
-  color: white;
+  padding: 4.5rem 0;
+  color: var(--text);
   font-size: 2.5rem;
 }
 
@@ -102,34 +106,23 @@ body {
   padding: 1rem 2.5rem;
 }
 
-/* Global scrollbar styles */
+/* Scrollbars */
 ::-webkit-scrollbar {
   width: 8px;
-  /* Width of the scrollbar */
   height: 8px;
-  /* Height of the scrollbar for horizontal scrolling */
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(4, 4, 4, 0.5);
-  /* Color of the scrollbar thumb */
+  background: rgba(79, 179, 217, 0.22); /* accent, but muted */
   border-radius: 4px;
-  /* Rounded corners for a modern look */
+  transition: background 0.3s ease;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(3, 3, 3, 0.7);
-  /* Darker thumb when hovered */
+  background: rgba(79, 179, 217, 0.4);
 }
 
 ::-webkit-scrollbar-track {
-  background: rgba(200, 200, 200, 0.2);
-  /* Background color of the scrollbar track */
+  background: rgba(0, 0, 0, 0.4);
   border-radius: 4px;
-  /* Rounded corners */
-}
-
-/* Add transition for smooth hover effect */
-::-webkit-scrollbar-thumb {
-  transition: background 0.3s ease;
 }

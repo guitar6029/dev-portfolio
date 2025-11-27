@@ -8,16 +8,26 @@ import {
   SiVuedotjs,
   SiNodedotjs,
   SiClerk,
+  SiPostgresql, 
 } from "react-icons/si";
-import { RiTailwindCssFill, RiBlenderLine, RiGithubFill, RiToolsFill   } from "react-icons/ri";
+import { DiMongodb } from "react-icons/di";
+import {
+  RiTailwindCssFill,
+  RiBlenderLine,
+  RiGithubFill,
+  RiToolsFill,
+  RiBootstrapFill,
+  RiGitlabFill,
+} from "react-icons/ri";
 import { JSX } from "react";
 import { TechName } from "@/types/Tech";
 
-
 const ICON_MAP: Record<TechName, JSX.Element> = {
   blender: <RiBlenderLine />,
+  bootstrap: <RiBootstrapFill />,
   clerk: <SiClerk />,
   github: <RiGithubFill />,
+  gitlab: <RiGitlabFill />,
   javascript: <SiJavascript />,
   next: <SiNextdotjs />,
   node: <SiNodedotjs />,
@@ -28,12 +38,14 @@ const ICON_MAP: Record<TechName, JSX.Element> = {
   tools: <RiToolsFill />,
   typescript: <SiTypescript />,
   vue: <SiVuedotjs />,
+  postgresql: <SiPostgresql />,
+  mongodb: <DiMongodb />
 };
 
-export type TechIconProps =  {
+export type TechIconProps = {
   name: TechName;
   className?: string;
-}
+};
 
 export default function TechIcon({ name, className }: TechIconProps) {
   const Icon = ICON_MAP[name];

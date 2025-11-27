@@ -20,7 +20,7 @@ export default function RootLayout({
         className={`${spaceJaeger.variable} ${exo2.variable}`}
       >
         <Header />
-        <main className="min-h-screen">{children}</main>
+        <main className="min-h-screen relative">{children}</main>
         <Analytics />
       </body>
     </html>
