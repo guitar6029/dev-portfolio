@@ -1,13 +1,11 @@
-import Hero from "../components/Hero/Hero";
-import { roles } from "../../data/roles";
-import MovingQueue from "../components/Slider/MovingQueue";
-
 export default function Home() {
   return (
-    <div>
-      <Hero/>
-      <MovingQueue list={roles}/>
+    <div className="flex flex-col gap-2 relative">
+      <div className="flex flex-col gap-2">
+        <span className="font-space text-[10rem]">Josh Soll</span>
+        <span className="font-exo text-4xl">Front End Developer</span>
+        <span className="font-exo text-4xl">Building code that becomes something people actually use.</span>
+      </div>
     </div>
-    
   );
 }

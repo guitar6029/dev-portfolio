@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import './animations.css';
 
 :root {
   /* ---- Core Neutral Palette ---- */
@@ -40,14 +41,6 @@
   --shadow-accent: 0 0 20px var(--accent-glow);
 }
 
-@font-face {
-  .font-tech {
-    font-family: "Rajdhani", sans-serif;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-  }
-}
-
 /* Utility Classes */
 @layer utilities {
   .trns {
@@ -61,43 +54,20 @@ html {
   scroll-behavior: smooth;
 }
 
+.font-space {
+  font-family: var(--font-spacejaeger);
+}
+
+.font-exo {
+  font-family: var(--font-exo2);
+}
+
 body {
-  /* 🌓 Dark mode (default look) */
   background: linear-gradient(45deg, #0b0b0b 0%, #242323 100%);
   color: var(--foreground, #ededed);
-  font-family: "Rajdhani", Arial, Helvetica, sans-serif;
   overflow-x: hidden;
 }
 
-@keyframes slide-in-left {
-  from {
-    transform: translateX(-100%) skewY(0);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0) skewY(var(--skewY, 0));
-    opacity: 1;
-  }
-}
-
-@keyframes slide-in-right {
-  from {
-    transform: translateX(100%) skewY(0);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0) skewY(var(--skewY, 0));
-    opacity: 1;
-  }
-}
-
-.animate-slide-in-right {
-  animation: slide-in-right 0.5s ease-in-out forwards;
-}
-
-.animate-slide-in-left {
-  animation: slide-in-left 0.5s ease-in-out forwards;
-}
 
 .fadeout-horizontal {
   mask-image: linear-gradient(
@@ -132,24 +102,6 @@ body {
   padding: 1rem 2.5rem;
 }
 
-@keyframes move-text {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
 /* Global scrollbar styles */
 ::-webkit-scrollbar {
   width: 8px;
@@ -180,18 +132,4 @@ body {
 /* Add transition for smooth hover effect */
 ::-webkit-scrollbar-thumb {
   transition: background 0.3s ease;
-}
-
-@keyframes appear {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-.bg-animate {
-  animation: appear 1s ease-in-out forwards 1s;
-  transition: all ease 0.5s;
 }

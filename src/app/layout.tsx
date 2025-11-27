@@ -1,23 +1,12 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "../components/Header/Header";
 import { Analytics } from "@vercel/analytics/react";
-import { ThemeProvider } from "next-themes";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import { spaceJaeger, exo2 } from "./fonts";
 
 export const metadata: Metadata = {
   title: "Josh Soll Dev Portfolio",
-  description: "A portfolio site for Josh Soll Dev",
+  description: "A portfolio site for Josh Soll",
 };
 
 export default function RootLayout({
@@ -28,18 +17,11 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${spaceJaeger.variable} ${exo2.variable}`}
       >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <Header />
-          <main className="min-h-screen">{children}</main>
-          <Analytics />
-        </ThemeProvider>
+        <Header />
+        <main className="min-h-screen">{children}</main>
+        <Analytics />
       </body>
     </html>
   );
