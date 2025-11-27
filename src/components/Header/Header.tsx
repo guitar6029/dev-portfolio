@@ -25,9 +25,9 @@ export default function Header() {
               <Link
                 key={route.id}
                 href={route.to}
-                className={`sm:text-xl md:text-2xl p-3 transition duration-300 ease-in ${
+                className={`sm:text-xl font-space md:text-2xl p-3 transition duration-300 ease-in ${
                   isActive
-                    ? "bg-(--bg-panel) text-(--blue)"
+                    ? "text-(--blue)"
                     : "hover:bg-(--bg-hover)"
                 }`}
               >
