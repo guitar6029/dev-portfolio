@@ -1,32 +1,59 @@
 @import "tailwindcss";
-@custom-variant dark (&:where(.dark, .dark *));
 
-
-/* Light tokens (default) */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* ---- Core Neutral Palette ---- */
+  --metal-900: #0d0f10; /* near-black carbon */
+  --metal-800: #1a1c1f; /* deep gunmetal */
+  --metal-700: #2a2d31; /* graphite */
+  --metal-600: #3a3e44; /* dark steel */
+  --metal-500: #4a4f58; /* steel gray */
+  --metal-400: #5c616b; /* brushed metal */
+  --metal-300: #7a808a; /* anodized gray */
+  --metal-200: #9aa1ac; /* cool alloy */
+  --metal-100: #c6ccd4; /* light steel */
+
+  /* ---- Neutral Text ---- */
+  --text-main: #e5e7eb; /* soft white gray */
+  --text-muted: #9ca3af; /* muted gray */
+  --text-accent: #d1d5db; /* mid-white */
+
+  /* ---- Subtle Accent (Industrial LED) ---- */
+  --accent: #7f8cff; /* muted steel-blue glow */
+  --accent-soft: #6976e6; /* softened version */
+  --accent-glow: rgba(127, 140, 255, 0.25); /* shadow glow */
+
+  /* ---- Secondary Amber Accent (optional) ---- */
+  --amber: #d4a55a; /* metallic warm light */
+  --amber-soft: #b88d49;
+  --amber-glow: rgba(212, 165, 90, 0.2);
+
+  /* ---- Surfaces ---- */
+  --surface-1: var(--metal-900);
+  --surface-2: var(--metal-800);
+  --surface-3: var(--metal-700);
+
+  /* ---- Borders & Shadows ---- */
+  --border-color: rgba(255, 255, 255, 0.06);
+  --border-strong: rgba(255, 255, 255, 0.12);
+
+  --shadow-soft: 0 0 20px rgba(0, 0, 0, 0.3);
+  --shadow-accent: 0 0 20px var(--accent-glow);
 }
 
-/* Dark tokens when <html class="dark"> */
-html.dark {
-  --background: #0a0a0a;
-  --foreground: #ededed;
-}
-
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@font-face {
+  .font-tech {
+    font-family: "Rajdhani", sans-serif;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
   }
+}
+
+/* Utility Classes */
+@layer utilities {
+  .trns {
+    @apply transition ease-in-out duration-300;
+  }
+
 }
 
 html {
@@ -34,27 +61,12 @@ html {
   scroll-behavior: smooth;
 }
 
-/* body {
-  background: linear-gradient(45deg, #0b0b0b 0%, #242323 100%);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-  overflow-x: hidden;
-} */
-
 body {
   /* 🌓 Dark mode (default look) */
   background: linear-gradient(45deg, #0b0b0b 0%, #242323 100%);
   color: var(--foreground, #ededed);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Rajdhani", Arial, Helvetica, sans-serif;
   overflow-x: hidden;
-}
-
-/* 🌞 Light mode override */
-@media (prefers-color-scheme: light) {
-  body {
-    background: linear-gradient(45deg, #f9fafb 0%, #e5e7eb 100%);
-    color: var(--foreground, #171717);
-  }
 }
 
 @keyframes slide-in-left {

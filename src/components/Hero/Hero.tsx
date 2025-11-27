@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { CornerDownLeft } from "lucide-react";
 export default function Hero() {
   return (
     <div className="relative h-fit flex flex-col items-center justify-center animate-slide-in-right transiiton duration-400 ease-in">
@@ -18,7 +17,7 @@ export default function Hero() {
           href={"/projects"}
         >
           <span className="group-hover:underline">My projects</span>
-          <CornerDownLeft size={24} />
+          
         </Link>
       </div>
     </div>

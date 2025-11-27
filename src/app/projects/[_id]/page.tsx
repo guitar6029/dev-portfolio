@@ -1,4 +1,6 @@
+import TechIcon from "@/components/TechIcon";
 import { connectToDatabase } from "@/lib/mongodb";
+import { TechName } from "@/types/Tech";
 import { ObjectId } from "mongodb";
 import Link from "next/link";
 export default async function Project({
@@ -6,7 +8,6 @@ export default async function Project({
 }: {
   params: Promise<{ _id: string }>;
 }) {
-  // ✅ Await the params object correctly
   const resolvedParams = await params;
 
   // Ensure the resolvedParams._id is valid
@@ -16,12 +17,12 @@ export default async function Project({
         <h1 className="text-4xl font-bold text-amber-400">Project Not Found</h1>
         <Link
           href={"/projects"}
-          className="text-2xl p-3 md:w-[15rem] md:text-center rounded-xl bg-amber-50 text-black hover:bg-amber-500 transition duration-300 ease-in"
+          className="text-2xl p-3 md:w-60 md:text-center rounded-xl bg-amber-50 text-black hover:bg-amber-500 transition duration-300 ease-in"
         >
           Go to Projects
         </Link>
       </div>
-    )
+    );
   }
 
   const { db } = await connectToDatabase();
@@ -37,7 +38,7 @@ export default async function Project({
         <h1 className="text-4xl font-bold text-amber-400">Project Not Found</h1>
         <Link
           href={"/projects"}
-          className="text-2xl p-3 md:w-[15rem] md:text-center rounded-xl bg-amber-50 text-black hover:bg-amber-500 transition duration-300 ease-in"
+          className="text-2xl p-3 md:w-60 md:text-center rounded-xl bg-amber-50 text-black hover:bg-amber-500 transition duration-300 ease-in"
         >
           Go to Projects
         </Link>
@@ -46,37 +47,45 @@ export default async function Project({
   }
 
   return (
-    <div className="min-h-screen p-4 flex flex-col gap-3 animate-slide-in-right">
-      <div className="flex flex-col gap-5">
-        <h1 className="text-4xl font-bold text-amber-400 underline">
-          {project.title}
-        </h1>
+    <div className="min-h-screen p-4 flex flex-col items-center justify-center gap-3 animate-slide-in-right">
+      <div className="flex flex-col items-center justify-center gap-5 p-4 ">
+        <h1 className="text-6xl font-bold text-amber-400">{project.title}</h1>
         <p className="text-3xl">{project.description}</p>
-        <h1 className="text-4xl font-bold text-amber-400 underline">
-          Tools Used:
-        </h1>
-        <ul className="list-disc list-inside">
-          {project.stack.map((tech: string) => (
-            <li className="text-3xl" key={tech}>
-              {tech}
-            </li>
+        <div className="flex items-center gap-2 text-4xl font-bold text-amber-400 ">
+          <TechIcon name={"tools"} />
+          Tools Used
+        </div>
+        <div className="flex flex-col gap-4">
+          {project.stack.map((tech: string, index: number) => (
+            <div
+              className="text-4xl transform duration-200 ease-in hover:bg-(--metal-600) flex flex-row items-center gap-2 rounded-full border-2 justify-center p-4 min-w-100"
+              key={index}
+            >
+              <TechIcon name={tech as TechName} />
+              <span className="capitalize">{tech}</span>
+            </div>
           ))}
-        </ul>
-        <a
-          href={project.github}
-          target="_blank"
-          className="text-black w-[100%] md:w-[15rem] font-bold text-center rounded-xl p-3 bg-amber-50 hover:bg-amber-500 transition duration-300 ease-in"
-        >
-          Github Repo
-        </a>
-        {project.preview && (
+        </div>
+        <div className="flex flex-row justify-center items-center gap-2 rounded-xl p-4 bg-amber-50 hover:bg-amber-500 transition duration-300 ease-in min-w-100">
           <a
-            href={project.preview}
+            href={project.github}
             target="_blank"
-            className="text-black w-[100%] md:w-[15rem] font-bold text-center rounded-xl p-3 bg-amber-50 hover:bg-amber-500 transition duration-300 ease-in"
+            className="text-black w-full flex items-center justify-center  font-bold"
           >
-            Live Preview
+            <TechIcon name={"github" as TechName} className="text-4xl" />
+            Github Repo
           </a>
+        </div>
+        {project.preview && (
+          <div className="flex flex-row justify-center items-center gap-2 rounded-xl p-4 bg-amber-50 hover:bg-amber-500 transition duration-300 ease-in min-w-100">
+            <a
+              href={project.preview}
+              target="_blank"
+              className="text-black font-bold"
+            >
+              Preview
+            </a>
+          </div>
         )}
       </div>
     </div>
