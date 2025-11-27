@@ -67,3 +67,18 @@
 .animate-slide-in-left {
   animation: slide-in-left 0.5s ease-in-out forwards;
 }
+
+
+.animated-shapes {
+    animation: squareMove 10s var(--delay) ease-in-out infinite alternate;
+}
+
+@keyframes squareMove {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        background-color: var(--blue);
+        transform: translateX(90vw);
+    }
+}

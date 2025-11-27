@@ -1,5 +1,6 @@
 import Card1 from "@/components/Accents/Card1";
 import Shape1 from "@/components/Accents/Shape1";
+import AnimatedShapesMoving from "@/components/Shapes/AnimatedShapesMoving";
 import TechIcon from "@/components/TechIcon";
 import { SkillTech } from "@/types/SkillTech";
 import { TechName } from "@/types/Tech";
@@ -30,13 +31,10 @@ export default function Home() {
         <span className="font-exo text-4xl">
           Building code that becomes something people actually use.
         </span>
-
-        <div className="absolute bottom-40 z-20 left-10 flex items-center gap-2">
-          {Array.from({ length: 3 }).map((_, i) => (
-            <div key={i} className="w-16 h-16 rounded-xl border-2" />
-          ))}
-        </div>
-
+        <AnimatedShapesMoving
+          shapes={5}
+          className="w-4 h-4 absolute top-10 right-20 rounded-xl border-2 animated-shapes"
+        />
         <Card1
           className="absolute top-0 left-0 -z-1"
           fill="var(--bg-panel)"
@@ -45,16 +43,8 @@ export default function Home() {
         />
       </div>
       <div className="flex flex-col items-center gap-12 h-screen relative">
-        <div className="absolute h-6 w-6 bg-(--blue) top-10 left-20 z-1"></div>
-        <div className="absolute h-6 w-6 bg-(--blue) top-10 left-40 z-1"></div>
-        <div className="absolute h-6 w-6 bg-(--blue) top-10 left-60 z-1"></div>
-
         <Shape1 className="absolute top-5 -left-50 w-200 -z-1 " />
         <Shape1 className="absolute top-200 -right-50 w-200 -z-1 " />
-
-        <div className="absolute h-6 w-6 bg-(--blue) top-220 right-20 z-1"></div>
-        <div className="absolute h-6 w-6 bg-(--blue) top-220 right-40 z-1"></div>
-        <div className="absolute h-6 w-6 bg-(--blue) top-220 right-60 z-1"></div>
 
         <div className="z-10 flex flex-col items-center justify-center gap-6">
           <h1 className="text-8xl font-space trns hover:text-(--blue)">
@@ -69,13 +59,13 @@ export default function Home() {
                     return (
                       <div
                         key={idx}
-                        className="w-50 trns hover:bg-(--bg-hover) h-35 border-2 rounded-xl flex flex-col items-center justify-center gap-2"
+                        className="w-50 trns hover:bg-(--bg-hover) hover:text-(--blue-soft) h-35 border-2 rounded-xl flex flex-col items-center justify-center gap-2"
                       >
                         <TechIcon
                           name={item as TechName}
                           className="text-4xl"
                         />
-                        <span className="capitalize">{item}</span>
+                        <span className="capitalize text-2xl">{item}</span>
                       </div>
                     );
                   })}
