@@ -7,13 +7,13 @@ export default function NotFound() {
         href={"/"}
         className="text-2xl p-3 md:w-[15rem] md:text-center rounded-xl bg-amber-50 text-black hover:bg-amber-500 transition duration-300 ease-in"
       >
-        Go to Home
+        Home
       </Link>
       <Link
-        href={"/projects"}
+        href={"/portfolio"}
         className="text-2xl p-3 md:w-[15rem] md:text-center rounded-xl bg-amber-50 text-black hover:bg-amber-500 transition duration-300 ease-in"
       >
-        Go to Projects
+        Portfolio
       </Link>
     </div>
   );

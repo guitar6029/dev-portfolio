@@ -16,10 +16,10 @@ export default async function Project({
       <div className="min-h-screen flex flex-col gap-4 items-center justify-center">
         <h1 className="text-4xl font-bold text-amber-400">Project Not Found</h1>
         <Link
-          href={"/projects"}
+          href={"/portfolio"}
           className="text-2xl p-3 md:w-60 md:text-center rounded-xl bg-amber-50 text-black hover:bg-amber-500 transition duration-300 ease-in"
         >
-          Go to Projects
+          Portfolio
         </Link>
       </div>
     );

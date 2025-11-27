@@ -14,9 +14,9 @@ export default function Hero() {
         </div>
         <Link
           className="group flex flex-row items-center justify-center gap-2  text-black w-[100%] mt-5 md:w-[15rem] font-bold text-center rounded-xl p-3 bg-amber-50 hover:bg-amber-500 transition duration-300 ease-in"
-          href={"/projects"}
+          href={"/portfolio"}
         >
-          <span className="group-hover:underline">My projects</span>
+          <span className="group-hover:underline">Portfolio</span>
           
         </Link>
       </div>

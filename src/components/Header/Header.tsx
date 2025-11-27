@@ -1,7 +1,6 @@
 "use client";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-// import ThemeToggler from "../ThemeToggler";
 
 export default function Header() {
   const pathName = usePathname();
@@ -20,14 +19,14 @@ export default function Header() {
             Home
           </Link>
           <Link
-            href="/projects"
+            href="/portfolio"
             className={`sm:text-xl md:text-2xl p-3  hover:text-black transition duration-300 ease-in ${
-              pathName.startsWith("/projects")
+              pathName.startsWith("/portfolio")
                 ? "bg-amber-300 text-black"
                 : "hover:bg-amber-500"
             }`}
           >
-            Projects
+            Portfolio
           </Link>
           <Link
             href="/about"
@@ -40,7 +39,7 @@ export default function Header() {
             About
           </Link>
         </div>
-        {/* <ThemeToggler /> */}
+
       </div>
     </header>
   );
