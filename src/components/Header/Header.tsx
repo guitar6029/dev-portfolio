@@ -5,7 +5,6 @@ import Link from "next/link";
 const ROUTES = [
   { id: 1, to: "/", label: "Home" },
   { id: 2, to: "/portfolio", label: "Portfolio" },
-  { id: 3, to: "/about", label: "About" },
 ];
 
 export default function Header() {
