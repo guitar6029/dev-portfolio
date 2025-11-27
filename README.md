@@ -1,36 +1,81 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+✦ PARALLAX-9
 
-## Getting Started
+A Cyberpunk-Inspired Interactive Web Experience
 
-First, run the development server:
+Parallax-9 is an experimental concept interface built to explore cyberpunk UI themes, immersive motion design, and futuristic navigation patterns. Inspired by dystopian system terminals and neon-lit data archives, the project blends 3D assets, animated panels, and reactive UI behaviors into a cohesive sci-fi experience.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+This is not a traditional app — it is a concept environment, a visual/interactive showcase of creativity, motion, and front-end engineering skill.
+
+✦ Live Demo
+
+https://parallax-9.vercel.app
+
+(Hosted on Vercel)
+
+✦ Features
+
+Cyberpunk UI System
+Neon panels, angular shapes, animated accents, deep-contrast layouts.
+
+Immersive Navigation
+Animated sidebars, active state transitions, section depth effects, and smooth UX flows.
+
+CMC (Construct Memory Core) Simulation
+Includes a fake loading sequence, status changes, and a deliberate “system failure” mode.
+
+3D Integration
+Custom Blender-made models rendered using Google Model Viewer for performance and compatibility.
+
+Custom Cursor System
+Optional futuristic pointer with glow effects and parallax motion.
+
+Dynamic Panels & Components
+Reusable cyber-styled UI pieces (Panel-1, Panel-2, NeuralArchiveCard, etc.).
+
+Responsive Layout
+Optimized for both large display environments and small/mobile screens.
+
+✦ Tech Stack
+Frontend
+
+Nuxt 4 (App Framework)
+
+Vue 3 + Composition API
+
+TailwindCSS 4 (Utility styling, custom themes)
+
+Google Model Viewer (3D rendering)
+
+GSAP / CSS Transitions (for motion & micro-interactions — optional depending on final setup)
+
+Design Tools
+
+Blender — creation of shards, core models, and geometric components
+
+Pixabay — ambient system sounds & effects
+
+Adobe / Figma — UI mockups (optional workflow)
+
+Hosting
+
+Vercel — SSR + static asset hosting
+
+
+✦ 3D Model Workflow
+
+Designed in Blender
+
+Exported as .glb
+
+Served through public/models/*
+
+Rendered using:
+
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+<model-viewer
+  src="/models/core.glb"
+  autoplay
+  camera-controls
+  disable-zoom
+></model-viewer>
+```
