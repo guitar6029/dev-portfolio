@@ -1,8 +1,8 @@
+import { SkillTech } from "@/types/SkillTech";
+import AnimatedShapesMoving from "@/components/Shapes/AnimatedShapesMoving";
 import Card1 from "@/components/Accents/Card1";
 import Shape1 from "@/components/Accents/Shape1";
-import AnimatedShapesMoving from "@/components/Shapes/AnimatedShapesMoving";
 import TechIcon from "@/components/TechIcon";
-import { SkillTech } from "@/types/SkillTech";
 import { TechName } from "@/types/Tech";
 
 const TECH: SkillTech[] = [
@@ -43,8 +43,14 @@ export default function Home() {
         />
       </div>
       <div className="flex flex-col items-center gap-12 h-screen relative">
-        <Shape1 className="absolute top-5 -left-50 w-200 -z-1 " />
+        <Shape1 className="absolute top-100 -left-50 w-200 -z-1 " />
         <Shape1 className="absolute top-200 -right-50 w-200 -z-1 " />
+
+        <AnimatedShapesMoving
+          shapes={4}
+          direction="right"
+          className="absolute top-50 animated-shapes-up-down w-6 h-6 border-2"
+        />
 
         <div className="z-10 flex flex-col items-center justify-center gap-6">
           <h1 className="text-8xl font-space trns hover:text-(--blue)">

@@ -1,9 +1,11 @@
 export default function AnimatedShapesMoving({
   shapes = 3,
   className = "w-16 h-16 absolute bottom-40 rounded-xl border-2 animated-shapes",
+  direction = "right",
 }: {
   shapes?: number;
   className?: string;
+  direction?: "left" | "right";
 }) {
   return (
     <>
@@ -14,7 +16,7 @@ export default function AnimatedShapesMoving({
           style={
             {
               "--delay": `${i * 200}ms`,
-              left: `${i * 100}px`,
+              [direction]: `${i * 100}px`,
             } as React.CSSProperties
           }
         />
