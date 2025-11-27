@@ -54,7 +54,7 @@ export default function Home() {
             return (
               <div key={index} className="flex flex-col items-center gap-6">
                 <span className="text-4xl text-(--blue)">{techItem.title}</span>
-                <div className="flex flex-row items-center justify-center gap-4">
+                <div className="flex flex-row flex-wrap items-center justify-center gap-4">
                   {techItem.stack.map((item: string, idx: number) => {
                     return (
                       <div
@@ -74,6 +74,20 @@ export default function Home() {
             );
           })}
         </div>
+      </div>
+
+      <div className="flex flex-col items-center gap-12 h-screen related">
+        <h1 className="text-8xl font-space trns hover:text-(--blue)">
+          About Me
+        </h1>
+        <p className="max-w-4xl text-4xl text-center">
+          I'm a Frontend Developer who builds modern, responsive web interfaces
+          with React, Next.js, Vue, and TypeScript. I focus on clean
+          architecture, reusable components, and smooth user experience —
+          whether it's UI animation, API integration, or scalable design
+          systems. I enjoy turning complex ideas into simple, intuitive
+          interfaces that people actually want to use.
+        </p>
       </div>
     </div>
   );
