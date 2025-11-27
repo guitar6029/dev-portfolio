@@ -16,7 +16,7 @@ export default function Header() {
   };
 
   return (
-    <header className="sticky top-0">
+    <header className="sticky top-0 z-100">
       <div className="flex flex-row items-center justify-between">
         <div className="flex flex-row items-center gap-2">
           {ROUTES.map((route) => {
