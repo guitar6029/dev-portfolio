@@ -166,7 +166,12 @@ export default function Home() {
                     return (
                       <div
                         key={idx}
-                        className="w-50 trns hover:bg-(--bg-hover) hover:text-(--blue-soft) h-35 border-2 rounded-xl flex flex-col items-center justify-center gap-2"
+                        className="w-50 trns hover:bg-(--bg-hover) hover:text-(--blue-soft) h-35 border-2 rounded-xl flex flex-col items-center justify-center gap-2 animate-slide-in-left"
+                        style={
+                          {
+                            "--delay": `${(idx + 1) * 340}ms`,
+                          } as React.CSSProperties
+                        }
                       >
                         <TechIcon
                           name={item as TechName}
