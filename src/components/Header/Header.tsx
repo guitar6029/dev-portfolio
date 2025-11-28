@@ -25,10 +25,8 @@ export default function Header() {
               <Link
                 key={route.id}
                 href={route.to}
-                className={`sm:text-xl font-space md:text-2xl p-3 transition duration-300 ease-in ${
-                  isActive
-                    ? "text-(--blue)"
-                    : "hover:bg-(--bg-hover)"
+                className={`sm:text-xl font-space md:text-4xl p-3 trns ${
+                  isActive ? "text-(--blue)" : "hover:bg-(--bg-hover)"
                 }`}
               >
                 {route.label}

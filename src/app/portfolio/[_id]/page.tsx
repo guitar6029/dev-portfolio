@@ -35,23 +35,23 @@ export default async function Project({
   if (!project) {
     return (
       <div className="min-h-screen flex flex-col gap-4items-center justify-center">
-        <h1 className="text-4xl font-bold text-amber-400">Project Not Found</h1>
+        <h1 className="text-4xl font-bold text-(--blue)">Project Not Found</h1>
         <Link
           href={"/projects"}
-          className="text-2xl p-3 md:w-60 md:text-center rounded-xl bg-amber-50 text-black hover:bg-amber-500 transition duration-300 ease-in"
+          className="text-2xl p-3 md:w-60 md:text-center rounded-xl  text-black hover:bg-amber-500 transition duration-300 ease-in"
         >
-          Go to Projects
+          Portfolio
         </Link>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen p-4 flex flex-col items-center justify-center gap-3 animate-slide-in-right">
+    <div className="h-screen p-4 flex flex-col items-center justify-center gap-3 animate-slide-in-right">
       <div className="flex flex-col items-center justify-center gap-5 p-4 ">
-        <h1 className="text-6xl font-bold text-amber-400">{project.title}</h1>
+        <h1 className="text-6xl font-bold text-(--blue)">{project.title}</h1>
         <p className="text-3xl">{project.description}</p>
-        <div className="flex items-center gap-2 text-4xl font-bold text-amber-400 ">
+        <div className="flex items-center gap-2 text-4xl font-bold text-(--blue) ">
           <TechIcon name={"tools"} />
           Tools Used
         </div>

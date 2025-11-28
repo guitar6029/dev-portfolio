@@ -13,7 +13,6 @@ export default async function Projects() {
 
   return (
     <div className="min-h-screen mt-5 flex flex-col p-4">
-      <h1 className="text-6xl font-bold ">Portfolio</h1>
       <div className="mt-6 flex flex-row flex-wrap gap-4">
         {projects.map((project, index) => (
           <Link
