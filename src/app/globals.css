@@ -6,8 +6,12 @@
   --bg: #030507;
   --bg-panel: #0b0f14;
 
-   --bg-hover: #111825;      /* subtle hover background */
-  --bg-hover-strong: #1a2335;  /* stronger hover when needed */
+  --bg-hover: #111825; /* subtle hover background */
+  --bg-hover-strong: #1a2335; /* stronger hover when needed */
+
+  --cp-purple: #b134ff;
+  --cp-purple-light: #ca6bff;
+  --cp-purple-dark: #7b1fb8;
 
   /* ---- Text ---- */
   --text: #e5e7ea;

@@ -15,8 +15,8 @@ export default function AnimatedShapesMoving({
           className={className}
           style={
             {
-              "--delay": `${i * 200}ms`,
-              [direction]: `${i * 100}px`,
+              "--delay": `${Math.floor(Math.random() * 250)}ms`,
+              [direction]: `${i * 120}px`,
             } as React.CSSProperties
           }
         />
