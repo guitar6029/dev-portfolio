@@ -4,6 +4,7 @@ import Card1 from "@/components/Accents/Card1";
 import Shape1 from "@/components/Accents/Shape1";
 import TechIcon from "@/components/TechIcon";
 import { TechName } from "@/types/Tech";
+import Panel1 from "@/components/Accents/Panel1";
 
 const TECH: SkillTech[] = [
   {
@@ -33,6 +34,7 @@ export default function Home() {
         </span>
         <AnimatedShapesMoving
           shapes={5}
+          direction="left"
           className="w-4 h-4 absolute top-10 right-20 rounded-xl border-2 animated-shapes"
         />
         <Card1
@@ -82,18 +84,23 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="flex flex-col items-center gap-12 h-screen related">
-        <h1 className="text-8xl font-space trns hover:text-(--blue)">
-          About Me
-        </h1>
-        <p className="max-w-4xl text-4xl text-center">
-          I'm a Frontend Developer who builds modern, responsive web interfaces
-          with React, Next.js, Vue, and TypeScript. I focus on clean
-          architecture, reusable components, and smooth user experience —
-          whether it's UI animation, API integration, or scalable design
-          systems. I enjoy turning complex ideas into simple, intuitive
-          interfaces that people actually want to use.
-        </p>
+      <div className="flex flex-col items-center gap-12 h-screen relative">
+        <div className="relative w-full flex flex-row items-center justify-center">
+          <div className="absolute inset-1 z-1">
+            <Panel1 stroke="var(--blue)" strokeWidth={2} />
+          </div>
+          <div className="trns hover:text-(--blue) relative z-10 flex flex-col items-center justify-center gap-2 mt-10">
+            <span className="text-8xl font-space ">About Me</span>
+            <p className="max-w-4xl text-4xl text-center">
+              I'm a Frontend Developer who builds modern, responsive web
+              interfaces with React, Next.js, Vue, and TypeScript. I focus on
+              clean architecture, reusable components, and smooth user
+              experience — whether it's UI animation, API integration, or
+              scalable design systems. I enjoy turning complex ideas into
+              simple, intuitive interfaces that people actually want to use.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );
