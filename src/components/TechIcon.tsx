@@ -18,6 +18,7 @@ import {
   RiToolsFill,
   RiBootstrapFill,
   RiGitlabFill,
+  RiLinkedinFill 
 } from "react-icons/ri";
 import { JSX } from "react";
 import { TechName } from "@/types/Tech";
@@ -29,17 +30,18 @@ const ICON_MAP: Record<TechName, JSX.Element> = {
   github: <RiGithubFill />,
   gitlab: <RiGitlabFill />,
   javascript: <SiJavascript />,
+  linkedin: <RiLinkedinFill />,
+  mongodb: <DiMongodb />,
   next: <SiNextdotjs />,
   node: <SiNodedotjs />,
   nuxt: <SiNuxtdotjs />,
+  postgresql: <SiPostgresql />,
   react: <SiReact />,
   svelte: <SiSvelte />,
   tailwind: <RiTailwindCssFill />,
   tools: <RiToolsFill />,
   typescript: <SiTypescript />,
   vue: <SiVuedotjs />,
-  postgresql: <SiPostgresql />,
-  mongodb: <DiMongodb />
 };
 
 export type TechIconProps = {
