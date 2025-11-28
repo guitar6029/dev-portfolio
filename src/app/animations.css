@@ -126,3 +126,29 @@
     transform: translate(0, 0);
   }
 }
+
+
+.animate-ud {
+   animation: moving 10s var(--delay, 1s) ease-in-out infinite alternate;
+}
+
+@keyframes moving {
+  0% {
+    transform: translateY(0,0);
+  }
+  /* top left */
+  25%{
+    transform: translate(0,-110px);
+  }
+  /* top right */
+  50%{
+    transform: translate(600px,-110px);
+  }
+  /* bottom right */
+  75%{
+    transform: translate(600px, 0);
+  }
+  100%{
+    transform: translate(0,0);
+  }
+}
