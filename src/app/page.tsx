@@ -11,11 +11,11 @@ export default function Home() {
       <Hero />
       <div className="h-100 w-full relative">
         <AbsoluteWrapper className="top-50 -left-50">
-          <BoxA />
+          <BoxA classname="sm:hidden lg:block lg:w-155 lg:h-155 opacity-20" />
         </AbsoluteWrapper>
 
         <AbsoluteWrapper className="top-100 -right-50">
-          <BoxA />
+          <BoxA classname="sm:hidden lg:block lg:w-155 lg:h-155 opacity-20" />
         </AbsoluteWrapper>
 
         <AbsoluteWrapper className="top-10 left-10 flex flex-col gap-2 animate-ud opacity-30">

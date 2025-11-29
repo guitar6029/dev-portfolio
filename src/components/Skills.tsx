@@ -68,8 +68,8 @@ export default function Skills() {
         </svg>
       </AbsoluteWrapper>
 
-      <Shape1 className="absolute top-100 -left-50 w-200 -z-1 " />
-      <Shape1 className="absolute top-200 -right-50 w-200 -z-1 " />
+      <Shape1 className="sm:hidden lg:block absolute top-100 -left-50 w-200 -z-1 " />
+      <Shape1 className="sm:hidden lg:block absolute top-200 -right-50 w-200 -z-1 " />
 
       <AnimatedShapesMoving
         shapes={5}
