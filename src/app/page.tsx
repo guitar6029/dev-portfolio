@@ -131,6 +131,35 @@ export default function Home() {
       </div>
 
       <div className="h-100 w-full relative">
+        <AbsoluteWrapper className="top-50 -left-50">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="w-155 h-155 opacity-35"
+            viewBox="0 0 180 224"
+            fill="none"
+          >
+            <path
+              d="M0.5 218V82L34.5 0.5H179V170.5L143.5 218H0.5Z"
+              stroke="#E6E21C"
+              strokeWidth={2}
+            />
+          </svg>
+        </AbsoluteWrapper>
+        <AbsoluteWrapper className="top-100 -right-50">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="w-155 h-155 opacity-35"
+            viewBox="0 0 180 224"
+            fill="none"
+          >
+            <path
+              d="M0.5 218V82L34.5 0.5H179V170.5L143.5 218H0.5Z"
+              stroke="#E6E21C"
+              strokeWidth={2}
+            />
+          </svg>
+        </AbsoluteWrapper>
+
         <AbsoluteWrapper className="top-10 left-10 animate-ud">
           <div className="w-6 h-6 border"></div>
         </AbsoluteWrapper>
@@ -295,6 +324,21 @@ export default function Home() {
             <path
               d="M176.477 483.385L385.425 552.44C396.681 556.16 408.684 549.328 411.233 537.75L440.621 404.246C441.18 401.703 441.238 399.075 440.791 396.51L389.226 100.84C387.855 92.9817 381.947 86.6894 374.191 84.8279L25.1683 1.06254C12.2725 -2.03244 -0.00945556 8.05204 0.516559 21.3036L12.158 314.577C12.3575 319.603 14.4434 324.37 18.0001 327.926L168.611 478.537C170.818 480.745 173.512 482.405 176.477 483.385Z"
               stroke="var(--cp-purple-dark)"
+              strokeWidth={2}
+            />
+          </svg>
+        </AbsoluteWrapper>
+
+        <AbsoluteWrapper className="bottom-20 -right-50">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="w-155 h-155 opacity-35"
+            viewBox="0 0 180 224"
+            fill="none"
+          >
+            <path
+              d="M0.5 218V82L34.5 0.5H179V170.5L143.5 218H0.5Z"
+              stroke="#E6E21C"
               strokeWidth={2}
             />
           </svg>
