@@ -25,6 +25,12 @@ export default function Home() {
           })}
         </AbsoluteWrapper>
 
+        <AbsoluteWrapper className="top-50 right-10 flex flex-col gap-2 animate-ud opacity-30">
+          {Array.from({ length: 3 }).map((_, idx: number) => {
+            return <div key={idx} className="w-6 h-6 border"></div>;
+          })}
+        </AbsoluteWrapper>
+
         <AbsoluteWrapper className="top-20 left-0 w-full">
           <LineA />
         </AbsoluteWrapper>
