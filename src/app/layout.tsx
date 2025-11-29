@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import "./globals.css";
+import "./style/globals.css";
 import Header from "../components/Header/Header";
 import { Analytics } from "@vercel/analytics/react";
 import { spaceJaeger, exo2 } from "./fonts";
@@ -16,9 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body
-        className={`${spaceJaeger.variable} ${exo2.variable}`}
-      >
+      <body className={`${spaceJaeger.variable} ${exo2.variable}`}>
         <Header />
         <main className="min-h-screen relative">{children}</main>
         <Analytics />
