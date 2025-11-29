@@ -17,6 +17,8 @@
   --text: #e5e7ea;
   --text-muted: #98a0a8;
 
+  --gray: rgb(200, 204, 215);
+
   /* ---- Neon Blue (Primary) ---- */
   --blue: #4cb1ff; /* main neon */
   --blue-glow: rgba(76, 177, 255, 0.35);
