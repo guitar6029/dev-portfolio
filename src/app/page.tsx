@@ -97,6 +97,21 @@ export default function Home() {
           </svg>
         </AbsoluteWrapper>
 
+        <AbsoluteWrapper className="top-10 left-1/2 -translate-x-1/2 w-full">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="w-auto h-full"
+            viewBox="0 0 1054 81"
+            fill="none"
+          >
+            <path
+              d="M0 58.5H217L273 0.5H460L519 80.5H802L905 30.5H1054"
+              stroke="var(--cp-purple)"
+              strokeWidth={0.2}
+            />
+          </svg>
+        </AbsoluteWrapper>
+
         <div className="flex flex-col items-center justify-center gap-2 relative animate-slide-in-left">
           <span className="relative text-center font-space text-4xl lg:text-[12rem] z-10">
             Josh Soll
@@ -116,14 +131,20 @@ export default function Home() {
       </div>
 
       <div className="h-100 w-full relative">
+        <AbsoluteWrapper className="top-10 left-10 animate-ud">
+          <div className="w-6 h-6 border"></div>
+        </AbsoluteWrapper>
+        <AbsoluteWrapper className="top-20 left-10 animate-ud">
+          <div className="w-6 h-6 border"></div>
+        </AbsoluteWrapper>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="w-full"
-          viewBox="0 0 2339 185"
+          viewBox="0 0 1054 81"
           fill="none"
         >
           <path
-            d="M0 184H1100.96C1104.13 184 1107.11 182.499 1109 179.954L1239 4.54563C1240.89 2.00077 1243.87 0.5 1247.04 0.5H2339"
+            d="M0 58.5H217L273 0.5H460L519 80.5H802L905 30.5H1054"
             stroke="var(--blue-glow)"
             strokeWidth={10}
           />
@@ -166,7 +187,7 @@ export default function Home() {
                     return (
                       <div
                         key={idx}
-                        className="w-50 trns hover:bg-(--bg-hover) hover:text-(--blue-soft) h-35 border-2 rounded-xl flex flex-col items-center justify-center gap-2 animate-slide-in-left"
+                        className="w-50 cursor-default trns hover:bg-(--bg-hover) hover:text-(--blue-soft) h-35 border-2 rounded-xl flex flex-col items-center justify-center gap-2 animate-slide-in-left"
                         style={
                           {
                             "--delay": `${(idx + 1) * 340}ms`,
