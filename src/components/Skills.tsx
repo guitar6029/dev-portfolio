@@ -68,8 +68,14 @@ export default function Skills() {
         </svg>
       </AbsoluteWrapper>
 
-      <Shape1 className="sm:hidden lg:block absolute top-100 -left-50 w-200 -z-1 " />
-      <Shape1 className="sm:hidden lg:block absolute top-200 -right-50 w-200 -z-1 " />
+      <Shape1
+        strokeWidth={5}
+        className="sm:hidden lg:block absolute top-100 -left-50 w-200 -z-1 opacity-25 "
+      />
+      <Shape1
+        strokeWidth={5}
+        className="sm:hidden lg:block absolute top-200 -right-50 w-200 -z-1 opacity-25"
+      />
 
       <AnimatedShapesMoving
         shapes={5}

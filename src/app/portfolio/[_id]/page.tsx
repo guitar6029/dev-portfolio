@@ -50,7 +50,7 @@ export default async function Project({
   }
 
   return (
-    <div className="relative h-screen p-4 flex flex-col items-center justify-center gap-3 animate-slide-in-right">
+    <div className="relative h-fit  p-4 flex flex-col items-center justify-center gap-3 animate-slide-in-right">
       <AbsoluteWrapper className="top-0 left-20 h-[70vh]">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -81,7 +81,7 @@ export default async function Project({
         </svg>
       </AbsoluteWrapper>
 
-      <AbsoluteWrapper className="bottom-50 right-10 flex flex-col gap-2 animated-shapes-up-down  opacity-30">
+      <AbsoluteWrapper className="bottom-50 right-10 flex flex-col gap-2 opacity-30">
         {Array.from({ length: 3 }).map((_, idx: number) => {
           return <div key={idx} className="w-6 h-6 border"></div>;
         })}
@@ -108,7 +108,7 @@ export default async function Project({
       </AbsoluteWrapper>
 
       <div className="flex flex-col items-center justify-center gap-12 p-4 z-10 relative ">
-        <div className="flex flex-row items-end relative gap-2">
+        <div className="flex flex-row items-end text-center relative gap-2">
           {Array.from({ length: 3 }).map((_, idx: number) => {
             return (
               <div

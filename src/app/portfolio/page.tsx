@@ -21,7 +21,7 @@ export default async function Projects() {
 
   return (
     <div className="min-h-screen mt-5 flex flex-col p-4 relative">
-      <AbsoluteWrapper className="-top-20 left-0 h-screen">
+      <AbsoluteWrapper className="-top-20 left-20 h-screen -z-1">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="h-full w-auto"
@@ -35,7 +35,7 @@ export default async function Projects() {
           />
         </svg>
       </AbsoluteWrapper>
-      <AbsoluteWrapper className="bottom-20 right-0 h-screen">
+      <AbsoluteWrapper className="bottom-20 right-0 h-screen -z-1">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="h-full w-auto"
@@ -54,13 +54,13 @@ export default async function Projects() {
           <Link
             href={`/portfolio/${project._id.toString()}`}
             key={project._id.toString()}
-            className="group relative p-4 flex flex-col items-center justify-center gap-4 w-full md:w-200 h-100"
+            className="group relative p-4 flex flex-col items-center justify-center gap-4 w-fit md:w-200 h-100"
             style={{
               opacity: 0,
               animation: `fadeIn 1.5s ease-out ${index * 1.5}s forwards`, // Stagger delay by index
             }}
           >
-            <div className="inset-0 absolute z-1">
+            <div className="inset-0 absolute z-1 sm:hidden lg:block">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="w-auto h-full"
@@ -74,7 +74,7 @@ export default async function Projects() {
                 />
               </svg>
             </div>
-            <div className="relative mb-4 z-10 flex flex-col items-center justify-center ">
+            <div className="relative z-10 flex flex-col items-center justify-center ">
               <h2 className="text-4xl font-bold">{project.title}</h2>
               <p className="text-lg">{project.description}</p>
             </div>
