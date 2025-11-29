@@ -119,7 +119,7 @@ export default function Skills() {
                       </svg>
 
                       <div
-                        className="relative z-10 cursor-default trns flex flex-col items-center justify-center gap-2"
+                        className="relative z-10 cursor-default trns  group-hover:text-(--cp-purple-light) flex flex-col items-center justify-center gap-2"
                         style={
                           {
                             "--delay": `${(idx + 1) * 340}ms`,
