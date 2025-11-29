@@ -1,3 +1,5 @@
+import BoxA from "@/components/Accents/BoxA";
+import PanelB from "@/components/Accents/PanelB";
 import TechIcon from "@/components/TechIcon";
 import { connectToDatabase } from "@/lib/mongodb";
 import { TechName } from "@/types/Tech";
@@ -47,42 +49,42 @@ export default async function Project({
   }
 
   return (
-    <div className="h-screen p-4 flex flex-col items-center justify-center gap-3 animate-slide-in-right">
-      <div className="flex flex-col items-center justify-center gap-5 p-4 ">
-        <h1 className="text-6xl font-bold text-(--blue)">{project.title}</h1>
+    <div className="relative h-screen p-4 flex flex-col items-center justify-center gap-3 animate-slide-in-right">
+      <div className="flex flex-col items-center justify-center gap-12 p-4 z-10 relative ">
+        <h1 className="text-6xl font-space text-(--blue)">{project.title}</h1>
         <p className="text-3xl">{project.description}</p>
-        <div className="flex items-center gap-2 text-4xl font-bold text-(--blue) ">
+        <div className="flex items-center gap-2 text-4xl font-bold font-space text-(--blue) ">
           <TechIcon name={"tools"} />
           Tools Used
         </div>
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col md:flex-row md:items-center gap-4">
           {project.stack.map((tech: string, index: number) => (
             <div
-              className="text-4xl transform duration-200 ease-in hover:bg-(--metal-600) flex flex-row items-center gap-2 rounded-full border-2 justify-center p-4 min-w-100"
+              className="relative group text-4xl flex flex-row items-center gap-2 justify-center p-4 min-w-55 h-50 animate-slide-in-left"
               key={index}
             >
-              <TechIcon name={tech as TechName} />
-              <span className="capitalize">{tech}</span>
+              <div className="absolute inset-0">
+                <PanelB strokeWidth={2} />
+              </div>
+              <div className="z-10 flex flex-row items-center gap-2">
+                <TechIcon name={tech as TechName} />
+                <span className="capitalize">{tech}</span>
+              </div>
             </div>
           ))}
         </div>
-        <div className="flex flex-row justify-center items-center gap-2 rounded-xl p-4 bg-amber-50 hover:bg-amber-500 transition duration-300 ease-in min-w-100">
+        <div className="flex flex-row justify-center items-center gap-2 rounded-xl p-4trns min-w-100">
           <a
             href={project.github}
             target="_blank"
-            className="text-black w-full flex items-center justify-center  font-bold"
+            className="w-full flex items-center justify-center font-bold hover:text-(--cp-purple) trns"
           >
             <TechIcon name={"github" as TechName} className="text-4xl" />
-            Github Repo
           </a>
         </div>
         {project.preview && (
-          <div className="flex flex-row justify-center items-center gap-2 rounded-xl p-4 bg-amber-50 hover:bg-amber-500 transition duration-300 ease-in min-w-100">
-            <a
-              href={project.preview}
-              target="_blank"
-              className="text-black font-bold"
-            >
+          <div className="flex flex-row justify-center items-center gap-2 rounded-xl p-4 trns min-w-100 hover:text-(--cp-purple) trns">
+            <a href={project.preview} target="_blank" className="font-bold">
               Preview
             </a>
           </div>
