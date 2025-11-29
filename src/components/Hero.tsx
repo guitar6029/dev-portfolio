@@ -93,14 +93,14 @@ export default function Hero() {
       </AbsoluteWrapper>
 
       <div className="flex flex-col items-center justify-center gap-2 relative animate-slide-in-left">
-        <span className="relative text-center font-space text-4xl lg:text-[12rem] z-10">
+        <span className="relative text-center font-space text-6xl lg:text-[12rem] z-10">
           Josh Soll
         </span>
       </div>
       <span className="font-exo text-6xl text-(--blue)">
         Front End Developer
       </span>
-      <span className="font-exo text-4xl">
+      <span className="font-exo text-4xl text-center">
         Building code that becomes something people actually use.
       </span>
       <AnimatedShapesMoving
