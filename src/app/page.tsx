@@ -1,4 +1,3 @@
-import AnimatedShapesMoving from "@/components/Shapes/AnimatedShapesMoving";
 import AbsoluteWrapper from "@/components/AbsoluteWrapper";
 import AboutMe from "@/components/AboutMe";
 import Skills from "@/components/Skills";
