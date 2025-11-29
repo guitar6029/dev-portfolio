@@ -40,7 +40,7 @@ export default function Hero() {
         </svg>
       </AbsoluteWrapper>
 
-      <AbsoluteWrapper className="-top-50 right-1 -z-10">
+      <AbsoluteWrapper className="-top-50 right-1 -z-10 sm:hidden lg:block">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="h-600 w-200"
@@ -63,7 +63,7 @@ export default function Hero() {
         </svg>
       </AbsoluteWrapper>
 
-      <AbsoluteWrapper className="-top-50 right-10 -z-10">
+      <AbsoluteWrapper className="-top-50 right-10 -z-10 sm:hidden lg:block">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="h-600 w-200"
