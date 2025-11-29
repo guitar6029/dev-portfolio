@@ -50,7 +50,7 @@ export default async function Project({
   }
 
   return (
-    <div className="relative h-fit  p-4 flex flex-col items-center justify-center gap-3 animate-slide-in-right">
+    <div className="relative h-fit mt-10 p-4 flex flex-col items-center justify-center gap-3 animate-slide-in-right">
       <AbsoluteWrapper className="top-0 left-20 h-[70vh]">
         <svg
           xmlns="http://www.w3.org/2000/svg"
