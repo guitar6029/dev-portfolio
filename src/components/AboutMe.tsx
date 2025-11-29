@@ -79,7 +79,7 @@ export default function AboutMe() {
         </svg>
       </AbsoluteWrapper>
 
-      <AbsoluteWrapper className="bottom-20 -right-50">
+      <AbsoluteWrapper className="bottom-20 -right-50 sm:hidden lg:block">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="w-155 h-155 opacity-35"
