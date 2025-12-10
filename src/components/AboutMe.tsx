@@ -97,7 +97,7 @@ export default function AboutMe() {
       <div className="relative w-full flex flex-row items-center justify-center trns lg:hover:scale-105">
         <div className="trns hover:text-(--blue) relative z-10 flex flex-col items-center justify-center gap-4 mt-10">
           <span className="text-4xl lg:text-8xl font-space ">About Me</span>
-          <p className="max-w-4xl text-2xl lg:text-4xl text-center">
+          <p className="w-full text-center lg:max-w-4xl text-2xl lg:text-4xl">
             I'm a Frontend Developer who builds modern, responsive web
             interfaces with React, Next.js, Vue, and TypeScript. I focus on
             clean architecture, reusable components, and smooth user experience
