@@ -1,24 +1,25 @@
 import {
-  SiJavascript,
-  SiTypescript,
-  SiNextdotjs,
-  SiSvelte,
-  SiReact,
-  SiNuxtdotjs,
-  SiVuedotjs,
-  SiNodedotjs,
   SiClerk,
+  SiFigma, 
+  SiJavascript,
+  SiNextdotjs,
+  SiNodedotjs,
+  SiNuxtdotjs,
   SiPostgresql, 
+  SiReact,
+  SiSvelte,
+  SiTypescript,
+  SiVuedotjs,
 } from "react-icons/si";
 import { DiMongodb } from "react-icons/di";
 import {
-  RiTailwindCssFill,
   RiBlenderLine,
-  RiGithubFill,
-  RiToolsFill,
   RiBootstrapFill,
+  RiGithubFill,
   RiGitlabFill,
-  RiLinkedinFill 
+  RiLinkedinFill, 
+  RiTailwindCssFill,
+  RiToolsFill,
 } from "react-icons/ri";
 import { JSX } from "react";
 import { TechName } from "@/types/Tech";
@@ -27,6 +28,7 @@ const ICON_MAP: Record<TechName, JSX.Element> = {
   blender: <RiBlenderLine />,
   bootstrap: <RiBootstrapFill />,
   clerk: <SiClerk />,
+  figma: <SiFigma />,
   github: <RiGithubFill />,
   gitlab: <RiGitlabFill />,
   javascript: <SiJavascript />,

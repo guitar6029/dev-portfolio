@@ -1,8 +1,8 @@
 import { SkillTech } from "@/types/SkillTech";
 import { TechName } from "@/types/Tech";
 import AbsoluteWrapper from "./AbsoluteWrapper";
-import Shape1 from "./Accents/Shape1";
 import AnimatedShapesMoving from "./Shapes/AnimatedShapesMoving";
+import Shape1 from "./Accents/Shape1";
 import TechIcon from "./TechIcon";
 import PanelB from "./Accents/PanelB";
 
@@ -17,7 +17,7 @@ const TECH: SkillTech[] = [
   },
   {
     title: "Tools & Ecosystem",
-    stack: ["typescript", "node", "gitlab", "blender"],
+    stack: ["typescript", "node", "gitlab", "figma"],
   },
 ];
 

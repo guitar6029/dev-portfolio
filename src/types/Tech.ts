@@ -2,6 +2,7 @@ export type TechName =
   | "blender"
   | "bootstrap"
   | "clerk"
+  | "figma"
   | "github"
   | "gitlab"
   | "javascript"
