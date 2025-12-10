@@ -49,33 +49,35 @@ export default async function Projects() {
           />
         </svg>
       </AbsoluteWrapper>
-      <div className="mt-6 flex flex-col items-center justify-center md:flex-row md:flex-wrap gap-4">
+      <div className="mt-12 ml-12 flex flex-col items-center  xl:flex-row xl:flex-wrap gap-50">
         {projects.map((project, index) => (
           <Link
             href={`/portfolio/${project._id.toString()}`}
             key={project._id.toString()}
-            className="group relative p-4 flex flex-col items-center justify-center gap-4 w-fit md:w-200 h-100"
+            className="group relative p-4 flex flex-col items-center justify-center gap-12 w-100 trns group"
             style={{
               opacity: 0,
               animation: `fadeIn 1.5s ease-out ${index * 1.5}s forwards`, // Stagger delay by index
             }}
           >
-            <div className="inset-0 absolute z-1 sm:hidden lg:block">
+            <div className="inset-0 absolute z-1 ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="w-auto h-full"
+                className="w-full h-auto group-hover:scale-105"
                 viewBox="0 0 769 443"
                 fill="none"
               >
                 <path
                   d="M32.5 427.5H16.5V82.5L84.5 20.5H752.5V50.5M32.5 427.5H692.5L752.5 365.5V50.5M32.5 427.5V442.5H700.5L768.5 371.5V50.5H752.5M738.5 0.5H768.5V28H766.5V2.5H738.5V0.5ZM0.5 101.5V306.5H6V101.5H0.5ZM0.5 312H6V332H0.5V312Z"
                   stroke={getColorForCard()}
-                  strokeWidth={2}
+                  strokeWidth={4}
                 />
               </svg>
             </div>
-            <div className="relative z-10 flex flex-col items-center justify-center ">
-              <h2 className="text-4xl font-bold">{project.title}</h2>
+            <div className="relative z-10 flex flex-col items-center justify-between gap-4 p-4">
+              <h2 className="text-4xl font-bold font-exo uppercase">
+                {project.title}
+              </h2>
               <p className="text-lg">{project.description}</p>
             </div>
           </Link>
