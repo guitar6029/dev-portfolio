@@ -96,7 +96,7 @@ export default function Skills() {
               ></div>
             );
           })}
-          <h1 className="text-8xl font-space trns hover:text-(--blue)">
+          <h1 className="text-4xl xl:text-8xl font-space trns hover:text-(--blue)">
             Skills
           </h1>
         </div>
