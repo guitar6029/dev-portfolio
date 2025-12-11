@@ -101,7 +101,7 @@ export default function Hero() {
         Front End Developer
       </span>
       <span className="font-exo text-4xl text-center">
-        Building code that becomes something people actually use.
+        Building interfaces that are intuitive, responsive, and dependable.
       </span>
       <AnimatedShapesMoving
         shapes={5}

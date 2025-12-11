@@ -20,7 +20,7 @@ export default async function Projects() {
   }
 
   return (
-    <div className="min-h-screen mt-5 flex flex-col p-4 relative">
+    <div className="mt-5 flex flex-col p-4 relative">
       <AbsoluteWrapper className="-top-20 left-20 h-screen -z-1">
         <svg
           xmlns="http://www.w3.org/2000/svg"

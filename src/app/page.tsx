@@ -4,6 +4,7 @@ import Skills from "@/components/Skills";
 import LineA from "@/components/Accents/LineA";
 import Hero from "@/components/Hero";
 import BoxA from "@/components/Accents/BoxA";
+import WhatIDo from "@/components/WhatIDo";
 
 export default function Home() {
   return (
@@ -34,6 +35,7 @@ export default function Home() {
           <LineA />
         </AbsoluteWrapper>
       </div>
+      <WhatIDo />
       <Skills />
       <div className="h-100 w-full relative">
         <LineA />
