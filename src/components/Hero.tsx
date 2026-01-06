@@ -98,7 +98,7 @@ export default function Hero() {
         </span>
       </div>
       <span className="font-exo text-4xl xl:text-6xl text-(--blue) text-center">
-        Front End Developer
+        Front End Engineer
       </span>
       <span className="font-exo text-4xl text-center">
         Building interfaces that are intuitive, responsive, and dependable.
