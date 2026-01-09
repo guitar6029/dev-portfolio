@@ -78,7 +78,7 @@ export default async function Projects() {
               <h2 className="text-4xl font-bold font-exo uppercase">
                 {project.title}
               </h2>
-              <p className="text-lg">{project.description}</p>
+              <p className="text-lg line-clamp-3">{project.description}</p>
             </div>
           </Link>
         ))}
