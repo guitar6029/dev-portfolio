@@ -54,18 +54,19 @@ export default async function Projects() {
           <Link
             href={`/portfolio/${project._id.toString()}`}
             key={project._id.toString()}
-            className="group relative p-4 flex flex-col items-center justify-center gap-12 w-100 trns group"
+            className="group relative p-4 flex flex-col items-center justify-center gap-12 w-100 min-h-[250px] trns group"
             style={{
               opacity: 0,
               animation: `fadeIn 1.5s ease-out ${index * 1.5}s forwards`, // Stagger delay by index
             }}
           >
-            <div className="inset-0 absolute z-1 ">
+            <div className="inset-0 absolute z-1">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="w-full h-auto group-hover:scale-105"
                 viewBox="0 0 769 443"
                 fill="none"
+                preserveAspectRatio="none"
               >
                 <path
                   d="M32.5 427.5H16.5V82.5L84.5 20.5H752.5V50.5M32.5 427.5H692.5L752.5 365.5V50.5M32.5 427.5V442.5H700.5L768.5 371.5V50.5H752.5M738.5 0.5H768.5V28H766.5V2.5H738.5V0.5ZM0.5 101.5V306.5H6V101.5H0.5ZM0.5 312H6V332H0.5V312Z"
@@ -74,8 +75,8 @@ export default async function Projects() {
                 />
               </svg>
             </div>
-            <div className="relative z-10 flex flex-col items-center justify-between gap-4 p-4">
-              <h2 className="text-4xl font-bold font-exo uppercase">
+            <div className="relative z-10 flex flex-col justify-between gap-4 p-4">
+              <h2 className="text-2xl font-bold font-exo uppercase">
                 {project.title}
               </h2>
               <p className="text-lg line-clamp-3">{project.description}</p>
