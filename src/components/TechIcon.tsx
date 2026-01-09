@@ -1,23 +1,27 @@
 import {
   SiClerk,
-  SiFigma, 
+  SiExpress,
+  SiFigma,
   SiJavascript,
+  SiJest,
   SiNextdotjs,
   SiNodedotjs,
   SiNuxtdotjs,
-  SiPostgresql, 
+  SiPostgresql,
   SiReact,
   SiSvelte,
   SiTypescript,
   SiVuedotjs,
+  SiZod,
 } from "react-icons/si";
+import { FaDocker } from "react-icons/fa";
 import { DiMongodb } from "react-icons/di";
 import {
   RiBlenderLine,
   RiBootstrapFill,
   RiGithubFill,
   RiGitlabFill,
-  RiLinkedinFill, 
+  RiLinkedinFill,
   RiTailwindCssFill,
   RiToolsFill,
 } from "react-icons/ri";
@@ -28,14 +32,17 @@ const ICON_MAP: Record<TechName, JSX.Element> = {
   blender: <RiBlenderLine />,
   bootstrap: <RiBootstrapFill />,
   clerk: <SiClerk />,
+  docker: <FaDocker />,
+  express: <SiExpress />,
   figma: <SiFigma />,
   github: <RiGithubFill />,
   gitlab: <RiGitlabFill />,
   javascript: <SiJavascript />,
+  jest: <SiJest />,
   linkedin: <RiLinkedinFill />,
   mongodb: <DiMongodb />,
   next: <SiNextdotjs />,
-  node: <SiNodedotjs />,
+  nodejs: <SiNodedotjs />,
   nuxt: <SiNuxtdotjs />,
   postgresql: <SiPostgresql />,
   react: <SiReact />,
@@ -44,6 +51,7 @@ const ICON_MAP: Record<TechName, JSX.Element> = {
   tools: <RiToolsFill />,
   typescript: <SiTypescript />,
   vue: <SiVuedotjs />,
+  zod: <SiZod />,
 };
 
 export type TechIconProps = {

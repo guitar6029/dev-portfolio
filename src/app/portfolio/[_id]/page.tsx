@@ -127,10 +127,10 @@ export default async function Project({
           <TechIcon name={"tools"} />
           Tools Used
         </div>
-        <div className="flex flex-col md:flex-row md:flex-wrap md:max-w-4xl md:items-center gap-4">
+        <div className="flex flex-col md:flex-row md:flex-wrap md:max-w-4xl md:items-center gap-4 cursor-default">
           {project.stack.map((tech: string, index: number) => (
             <div
-              className="relative group text-4xl flex flex-row items-center gap-2 justify-center p-4 min-w-55 h-50 animate-slide-in-left"
+              className="relative group text-xl flex flex-row items-center gap-2 justify-center p-4 min-w-55 h-50 animate-slide-in-left"
               key={index}
             >
               <div className="absolute inset-0">
