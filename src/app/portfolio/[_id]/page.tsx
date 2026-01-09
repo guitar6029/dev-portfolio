@@ -122,12 +122,12 @@ export default async function Project({
           })}
           <h1 className="text-6xl font-space text-(--blue)">{project.title}</h1>
         </div>
-        <p className="text-3xl">{project.description}</p>
+        <p className="text-3xl max-w-4xl">{project.description}</p>
         <div className="flex items-center gap-2 text-4xl font-bold font-space text-(--blue) ">
           <TechIcon name={"tools"} />
           Tools Used
         </div>
-        <div className="flex flex-col md:flex-row md:items-center gap-4">
+        <div className="flex flex-col md:flex-row md:flex-wrap md:max-w-4xl md:items-center gap-4">
           {project.stack.map((tech: string, index: number) => (
             <div
               className="relative group text-4xl flex flex-row items-center gap-2 justify-center p-4 min-w-55 h-50 animate-slide-in-left"
