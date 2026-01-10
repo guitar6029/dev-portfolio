@@ -20,6 +20,7 @@ export type TechName =
   | "react"
   | "svelte"
   | "tailwind"
+  | "tanstack_query"
   | "tools"
   | "typescript"
   | "vue"

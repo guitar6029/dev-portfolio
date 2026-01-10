@@ -29,6 +29,7 @@ import { BsFiletypeJson } from "react-icons/bs";
 import { JSX } from "react";
 import { TechName } from "@/types/Tech";
 import PiniaIcon from "./Icons/PiniaIcon";
+import TanstackQuery from "./Icons/TanstackQuery";
 
 const ICON_MAP: Record<TechName, JSX.Element> = {
   blender: <RiBlenderLine />,
@@ -52,6 +53,7 @@ const ICON_MAP: Record<TechName, JSX.Element> = {
   react: <SiReact />,
   svelte: <SiSvelte />,
   tailwind: <RiTailwindCssFill />,
+  tanstack_query: <TanstackQuery />,
   tools: <RiToolsFill />,
   typescript: <SiTypescript />,
   vue: <SiVuedotjs />,

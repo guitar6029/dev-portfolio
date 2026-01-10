@@ -17,7 +17,7 @@ const TECH: SkillTech[] = [
   },
   {
     title: "Tools & Ecosystem",
-    stack: ["typescript", "node", "gitlab", "figma"],
+    stack: ["typescript", "nodejs", "gitlab", "figma"],
   },
 ];
 
