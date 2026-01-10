@@ -25,8 +25,10 @@ import {
   RiTailwindCssFill,
   RiToolsFill,
 } from "react-icons/ri";
+import { BsFiletypeJson } from "react-icons/bs";
 import { JSX } from "react";
 import { TechName } from "@/types/Tech";
+import PiniaIcon from "./Icons/PiniaIcon";
 
 const ICON_MAP: Record<TechName, JSX.Element> = {
   blender: <RiBlenderLine />,
@@ -39,11 +41,13 @@ const ICON_MAP: Record<TechName, JSX.Element> = {
   gitlab: <RiGitlabFill />,
   javascript: <SiJavascript />,
   jest: <SiJest />,
+  jsonserver: <BsFiletypeJson />,
   linkedin: <RiLinkedinFill />,
   mongodb: <DiMongodb />,
   next: <SiNextdotjs />,
   nodejs: <SiNodedotjs />,
   nuxt: <SiNuxtdotjs />,
+  pinia: <PiniaIcon />,
   postgresql: <SiPostgresql />,
   react: <SiReact />,
   svelte: <SiSvelte />,
