@@ -9,10 +9,7 @@ export default async function Projects() {
   const { db } = await connectToDatabase();
 
   // Fetch the list of GitHub projects
-  const projects = await db
-    .collection("github-projects") // Use your collection name
-    .find({})
-    .toArray();
+  const projects = await db.collection("github-projects").find({}).toArray();
 
   function getColorForCard() {
     const randomColor = Math.floor(Math.random() * COLORS.length);
@@ -54,7 +51,7 @@ export default async function Projects() {
           <Link
             href={`/portfolio/${project._id.toString()}`}
             key={project._id.toString()}
-            className="group relative p-4 flex flex-col items-center justify-center gap-12 w-100 min-h-[250px] trns group"
+            className="group relative p-4 flex flex-col items-center justify-center gap-12 w-100 min-h-62.5 trns group"
             style={{
               opacity: 0,
               animation: `fadeIn 1.5s ease-out ${index * 1.5}s forwards`, // Stagger delay by index
