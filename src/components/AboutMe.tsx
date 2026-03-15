@@ -98,12 +98,14 @@ export default function AboutMe() {
         <div className="trns hover:text-(--blue) relative z-10 flex flex-col items-center justify-center gap-4 mt-10">
           <span className="text-4xl lg:text-8xl font-space ">About Me</span>
           <p className="w-full text-center lg:max-w-4xl text-2xl lg:text-4xl">
-            I'm a Frontend Engineer who builds modern, responsive web
-            interfaces with React, Next, Nuxt, Vue, and TypeScript. I focus on
-            clean architecture, reusable components, and smooth user experience
-            — whether it's UI animation, API integration, or scalable design
-            systems. I enjoy turning complex ideas into simple, intuitive
-            interfaces that people actually want to use.
+            I'm a Software Engineer focused on building modern web applications
+            using TypeScript and the JavaScript ecosystem. I work across
+            numerous libraries and frameworks—including React, Next.js, and
+            Vue—choosing the right tools for the problem rather than locking
+            into a single stack. My work involves designing scalable interfaces,
+            integrating APIs, and building data-driven dashboards. I enjoy
+            turning complex technical problems into simple, intuitive user
+            experiences.
           </p>
           <div className="flex items-center text-6xl gap-4">
             <a
