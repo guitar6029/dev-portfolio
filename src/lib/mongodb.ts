@@ -1,24 +1,24 @@
 import { MongoClient, Db } from "mongodb";
 
-// Ensure the MongoDB URI is provided
-if (!process.env.MONGODB_URI) {
-  throw new Error(
-    "Please define the MONGODB_URI environment variable in your .env file"
-  );
-}
-
-// this is the new connection URI for the mongodb stored in the env variable
-const client = new MongoClient(process.env.MONGODB_URI as string);
-
 let cachedClient: MongoClient | null = null;
 let cachedDb: Db | null = null;
 
 // this will connect to db
 export async function connectToDatabase() {
+  // Ensure the MongoDB URI is provided when the database is used
+  if (!process.env.MONGODB_URI) {
+    throw new Error(
+      "Please define the MONGODB_URI environment variable in your .env file"
+    );
+  }
+
   //if already cached, return the cached db
   if (cachedClient && cachedDb) {
     return { client: cachedClient, db: cachedDb };
   }
+
+  // this is the new connection URI for the mongodb stored in the env variable
+  const client = new MongoClient(process.env.MONGODB_URI);
 
   //if not cached, connect to db
   await client.connect();
