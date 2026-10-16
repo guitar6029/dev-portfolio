@@ -25,7 +25,7 @@ jobs:
         run: npm ci
 
       - name: Run lint
-        run: npm run lint
+        run: npm exec -- eslint .
 
       - name: Build application
         run: npm run build
