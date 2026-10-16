@@ -98,7 +98,7 @@ export default function AboutMe() {
         <div className="trns hover:text-(--blue) relative z-10 flex flex-col items-center justify-center gap-4 mt-10">
           <span className="text-4xl lg:text-8xl font-space ">About Me</span>
           <p className="w-full text-center lg:max-w-4xl text-2xl lg:text-4xl">
-            I'm a Software Engineer focused on building modern web applications
+            I&apos;m a Software Engineer focused on building modern web applications
             using TypeScript and the JavaScript ecosystem. I work across
             numerous libraries and frameworks—including React, Next.js, and
             Vue—choosing the right tools for the problem rather than locking

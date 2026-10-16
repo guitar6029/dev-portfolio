@@ -1,4 +1,6 @@
 import Link from "next/link";
+export const dynamic = "force-dynamic";
+
 import { connectToDatabase } from "@/lib/mongodb";
 import AbsoluteWrapper from "@/components/AbsoluteWrapper";
 
@@ -10,11 +12,6 @@ export default async function Projects() {
 
   // Fetch the list of GitHub projects
   const projects = await db.collection("github-projects").find({}).toArray();
-
-  function getColorForCard() {
-    const randomColor = Math.floor(Math.random() * COLORS.length);
-    return COLORS[randomColor];
-  }
 
   return (
     <div className="mt-5 flex flex-col p-4 relative">
@@ -66,8 +63,8 @@ export default async function Projects() {
                 preserveAspectRatio="none"
               >
                 <path
-                  d="M32.5 427.5H16.5V82.5L84.5 20.5H752.5V50.5M32.5 427.5H692.5L752.5 365.5V50.5M32.5 427.5V442.5H700.5L768.5 371.5V50.5H752.5M738.5 0.5H768.5V28H766.5V2.5H738.5V0.5ZM0.5 101.5V306.5H6V101.5H0.5ZM0.5 312H6V332H0.5V312Z"
-                  stroke={getColorForCard()}
+                  d="M32.5 427.5H16.5V82.5L84.5 20.5H752.5V50.5M32.5 427.5H692.5L752.5 365.5V50.5M32.5 427.5V442.5H700.5L768.5 371.5V50.5M738.5 0.5H768.5V28H766.5V2.5H738.5V0.5ZM0.5 101.5V306.5H6V101.5H0.5ZM0.5 312H6V332H0.5V312Z"
+                  stroke={COLORS[index % COLORS.length]}
                   strokeWidth={4}
                 />
               </svg>
