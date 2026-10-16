@@ -1,4 +1,6 @@
 import AbsoluteWrapper from "@/components/AbsoluteWrapper";
+export const dynamic = "force-dynamic";
+
 import BoxA from "@/components/Accents/BoxA";
 import PanelB from "@/components/Accents/PanelB";
 import TechIcon from "@/components/TechIcon";
