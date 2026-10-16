@@ -1,4 +1,6 @@
 import Link from "next/link";
+export const dynamic = "force-dynamic";
+
 import { connectToDatabase } from "@/lib/mongodb";
 import AbsoluteWrapper from "@/components/AbsoluteWrapper";
 
