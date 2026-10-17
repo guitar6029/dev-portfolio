@@ -1,11 +1,13 @@
 import Link from "next/link";
 
 import AbsoluteWrapper from "@/components/AbsoluteWrapper";
-import { projects } from "@/data/projects";
+import { getProjects } from "@/sanity/queries";
 
 const COLORS = ["var(--cp-purple)", "var(--blue)", "var(--red)"];
 
 export default async function Projects() {
+  const projects = await getProjects();
+
   return (
     <div className="mt-5 flex flex-col p-4 relative">
       <AbsoluteWrapper className="-top-20 left-20 h-screen -z-1">
@@ -37,6 +39,9 @@ export default async function Projects() {
         </svg>
       </AbsoluteWrapper>
       <div className="mt-12 ml-12 flex flex-col items-center  xl:flex-row xl:flex-wrap gap-50">
+        {projects.length === 0 && (
+          <p className="text-xl text-center">No projects published yet.</p>
+        )}
         {projects.map((project, index) => (
           <Link
             href={`/portfolio/${project.slug}`}
@@ -66,7 +71,9 @@ export default async function Projects() {
               <h2 className="text-2xl font-bold font-exo uppercase">
                 {project.title}
               </h2>
-              <p className="text-lg line-clamp-3">{project.description}</p>
+              <p className="text-lg line-clamp-3">
+                {project.shortDescription}
+              </p>
             </div>
           </Link>
         ))}
