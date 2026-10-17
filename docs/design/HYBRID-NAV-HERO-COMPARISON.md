@@ -6,6 +6,8 @@
 
 [Open the alternate framed-systems mockup](./hybrid-navigation-hero-variation-c.html). It contains a separate desktop/mobile direction inspired by the reference’s floating dashboard shell and vertical utility rail, with an abstract architectural visual instead of a person.
 
+[Open the new system-artifact mockup](./hybrid-navigation-hero-variation-d.html). It is an unapproved alternate exploration inspired by the centered square artifact, sparse orbital diagram, and vertical index rail in the latest reference.
+
 ## Shared hybrid system
 
 Both directions combine the D1 Structural Rail navigation with the D1 Monolith Frame hero:
@@ -51,3 +53,5 @@ Tradeoff: the framed shell creates a stronger product/interface metaphor and giv
 ## Scope and constraints
 
 These are static design prototypes only. No production Next.js components, routes, Sanity files, dependencies, configuration, or content data were changed. The copy is positioning language only and contains no experience statistics, proficiency percentages, or fabricated project claims.
+
+Variation D is exploratory and does not supersede the D3 approval of Variation C.

@@ -11,8 +11,8 @@
         --graphite: #1b1f20;
         --graphite-2: #2b3030;
         --silver: #e3e6e2;
-        --paper: #cdd2cf;
-        --paper-2: #b8bfbc;
+        --paper: #b9b7ae;
+        --paper-2: #999991;
         --muted: #8e9896;
         --steel: #a7b8b8;
         --oxide: #ad735b;
@@ -44,32 +44,32 @@
       .nav-links .active { color: var(--silver); }
       .nav-links .active::after { content: ""; display: inline-block; width: 18px; margin-left: 8px; border-top: 1px solid var(--steel); vertical-align: middle; }
       .menu-button { display: none; color: var(--silver); }
-      .system-card { position: absolute; z-index: 2; top: 142px; right: 6%; bottom: 8%; left: 6%; overflow: hidden; background: var(--paper); color: #101313; border-radius: 18px; box-shadow: 0 22px 55px rgb(0 0 0 / 35%); }
-      .system-card::before { content: ""; position: absolute; inset: 0; background: linear-gradient(135deg, transparent 0 61%, rgb(255 255 255 / 22%) 61% 61.2%, transparent 61.2%); pointer-events: none; }
+      .system-card { position: absolute; z-index: 2; top: 142px; right: 6%; bottom: 8%; left: 6%; overflow: hidden; background: var(--paper); color: #0c0f0e; border-radius: 18px; box-shadow: 0 14px 32px rgb(0 0 0 / 23%); }
+      .system-card::before { content: ""; position: absolute; inset: 0; border: 1px solid rgb(255 255 255 / 13%); pointer-events: none; }
       .system-rail { position: absolute; z-index: 2; top: 18px; bottom: 18px; left: 18px; width: 58px; display: flex; flex-direction: column; align-items: center; justify-content: space-between; padding: 18px 0; background: var(--carbon); color: var(--paper); border-radius: 28px; }
       .rail-mark { width: 23px; height: 23px; border: 1px solid var(--paper); border-radius: 50%; }
       .rail-mark::after { content: ""; display: block; width: 5px; height: 5px; margin: 8px; background: var(--oxide); border-radius: 50%; }
       .rail-label { writing-mode: vertical-rl; transform: rotate(180deg); font-size: 9px; letter-spacing: .18em; }
       .rail-index { color: var(--steel); font-size: 9px; }
       .system-copy { position: absolute; z-index: 3; left: 112px; bottom: 52px; width: 39%; }
-      .system-copy .label { color: #4d5b5b; }
+      .system-copy .label { color: #293635; }
       .system-copy h2 { margin: 18px 0 20px; font-family: var(--display); font-size: clamp(72px, 9vw, 132px); font-weight: 800; letter-spacing: -.09em; line-height: .78; text-transform: uppercase; }
       .system-copy .role { max-width: 325px; font-size: 15px; line-height: 1.45; }
-      .system-copy .body { max-width: 315px; margin-top: 12px; color: #4d5857; font-size: 12px; line-height: 1.55; }
+      .system-copy .body { max-width: 315px; margin-top: 12px; color: #35413f; font-size: 12px; line-height: 1.55; }
       .actions { display: flex; gap: 8px; margin-top: 22px; }
       .button { display: inline-flex; align-items: center; min-height: 36px; padding: 0 12px; border: 1px solid #34403f; color: #162020; text-decoration: none; }
       .button.primary { background: #17201f; color: var(--paper); border-color: #17201f; }
       .system-visual { position: absolute; z-index: 1; top: 48px; right: 52px; bottom: 48px; width: 45%; overflow: hidden; background: var(--graphite); clip-path: polygon(11% 0, 100% 0, 100% 80%, 82% 100%, 0 100%, 0 16%); }
-      .system-visual::before { content: ""; position: absolute; inset: 12% 10% 12% 13%; border: 1px solid var(--line); clip-path: polygon(10% 0, 100% 0, 100% 76%, 76% 100%, 0 100%, 0 17%); }
-      .system-visual::after { content: ""; position: absolute; top: 16%; right: 16%; width: 44%; height: 44%; border: 1px solid rgb(167 184 184 / 70%); transform: rotate(45deg); }
-      .visual-grid { position: absolute; inset: 13% 13% 13% 16%; background: repeating-linear-gradient(90deg, transparent 0 33%, rgb(227 230 226 / 12%) 33% 33.5%), repeating-linear-gradient(0deg, transparent 0 33%, rgb(227 230 226 / 12%) 33% 33.5%); }
-      .visual-orbit { position: absolute; top: 29%; right: 21%; width: 150px; height: 150px; border: 1px solid var(--steel); border-radius: 50%; box-shadow: 0 0 0 20px rgb(167 184 184 / 8%), 0 0 0 42px rgb(167 184 184 / 5%); }
-      .visual-orbit::after { content: ""; position: absolute; top: 50%; left: -34%; width: 168%; border-top: 1px solid var(--oxide); transform: rotate(-28deg); }
-      .visual-tag { position: absolute; right: 14%; bottom: 14%; padding: 9px 11px; background: var(--oxide); color: #101313; font-size: 9px; font-weight: 700; letter-spacing: .12em; }
-      .visual-line { position: absolute; left: 13%; right: 12%; bottom: 18%; border-top: 1px solid var(--steel); }
-      .system-tile { position: absolute; z-index: 4; bottom: 11%; width: 70px; height: 45px; background: var(--paper-2); border: 1px solid #566160; clip-path: polygon(0 0, 82% 0, 100% 28%, 100% 100%, 18% 100%, 0 72%); }
+      .system-visual::before { content: ""; position: absolute; inset: 16% 14% 16% 14%; border-left: 1px solid rgb(167 184 184 / 42%); border-bottom: 1px solid rgb(167 184 184 / 42%); clip-path: polygon(0 0, 100% 0, 100% 78%, 78% 100%, 0 100%); }
+      .system-visual::after { content: ""; position: absolute; top: 18%; right: 17%; width: 32%; height: 32%; border-top: 1px solid rgb(167 184 184 / 48%); border-right: 1px solid rgb(167 184 184 / 48%); transform: rotate(45deg); }
+      .visual-grid { position: absolute; inset: 18% 18% 18% 18%; opacity: .25; background: linear-gradient(90deg, transparent 49.5%, rgb(227 230 226 / 20%) 50%, transparent 50.5%); }
+      .visual-orbit { position: absolute; top: 35%; right: 28%; width: 104px; height: 104px; border: 1px solid rgb(169 183 180 / 72%); border-radius: 50%; }
+      .visual-orbit::before { content: ""; position: absolute; top: 50%; left: 50%; width: 7px; height: 7px; background: var(--steel); transform: translate(-50%, -50%); }
+      .visual-tag { display: none; }
+      .visual-line { position: absolute; left: 18%; right: 18%; bottom: 22%; border-top: 1px solid rgb(167 184 184 / 48%); }
+      .system-tile { position: absolute; z-index: 4; bottom: 11%; width: 70px; height: 45px; opacity: .2; background: var(--paper-2); border: 1px solid #566160; clip-path: polygon(0 0, 82% 0, 100% 28%, 100% 100%, 18% 100%, 0 72%); }
       .system-tile.one { left: 8%; }
-      .system-tile.two { left: 15%; bottom: 3%; background: var(--oxide); }
+      .system-tile.two { left: 15%; bottom: 3%; background: var(--oxide); opacity: .2; }
       .system-tile.three { right: 8%; transform: rotate(180deg); }
       .outside-mark { position: absolute; z-index: 3; right: 30px; bottom: 28px; color: var(--muted); font-size: 10px; letter-spacing: .14em; }
       .mobile .nav { min-height: 62px; padding: 0 20px; }
@@ -79,15 +79,14 @@
       .mobile .system-rail { top: 14px; bottom: 14px; left: 12px; width: 42px; border-radius: 22px; }
       .mobile .rail-mark { width: 18px; height: 18px; }
       .mobile .rail-mark::after { width: 4px; height: 4px; margin: 6px; }
-      .mobile .system-copy { top: 32px; right: 16px; bottom: auto; left: 72px; width: auto; }
-      .mobile .system-copy h2 { margin: 15px 0 16px; font-size: 76px; }
+      .mobile .system-copy { top: 32px; right: 14px; bottom: auto; left: 72px; width: auto; max-width: 246px; }
+      .mobile .system-copy h2 { margin: 15px 0 16px; font-size: 72px; }
       .mobile .system-copy .role { font-size: 14px; }
       .mobile .system-copy .body { font-size: 11px; }
       .mobile .actions { display: grid; grid-template-columns: 1fr; gap: 7px; margin-top: 18px; }
       .mobile .button { justify-content: center; min-height: 34px; }
       .mobile .system-visual { top: auto; right: 14px; bottom: 64px; left: 72px; width: auto; height: 31%; clip-path: polygon(9% 0, 100% 0, 100% 82%, 82% 100%, 0 100%, 0 18%); }
-      .mobile .visual-orbit { top: 24%; right: 22%; width: 92px; height: 92px; }
-      .mobile .visual-tag { right: 11%; bottom: 13%; padding: 7px; font-size: 8px; }
+      .mobile .visual-orbit { top: 28%; right: 22%; width: 76px; height: 76px; }
       .mobile .system-tile { bottom: 8%; width: 51px; height: 34px; }
       .mobile .system-tile.one { left: 7%; }
       .mobile .system-tile.two { left: 19%; bottom: 3%; }
@@ -122,7 +121,7 @@
               <p class="body">Clear structure, resilient frontend systems, and considered interaction.</p>
               <div class="actions"><a class="button primary" href="#comparison">View selected work ↗</a><a class="button" href="#comparison">Résumé</a></div>
             </div>
-            <div class="system-visual" aria-hidden="true"><span class="visual-grid"></span><span class="visual-orbit"></span><span class="visual-tag">SIGNAL / 01</span><span class="visual-line"></span></div>
+            <div class="system-visual" aria-hidden="true"><span class="visual-grid"></span><span class="visual-orbit"></span><span class="visual-line"></span></div>
             <span class="system-tile one" aria-hidden="true"></span><span class="system-tile two" aria-hidden="true"></span><span class="system-tile three" aria-hidden="true"></span>
           </section>
           <div class="outside-mark">A PRACTICE IN CLARITY ↓</div>
@@ -142,7 +141,7 @@
               <p class="body">Clear structure, resilient frontend systems.</p>
               <div class="actions"><a class="button primary" href="#comparison">View selected work ↗</a><a class="button" href="#comparison">Résumé</a></div>
             </div>
-            <div class="system-visual" aria-hidden="true"><span class="visual-grid"></span><span class="visual-orbit"></span><span class="visual-tag">SIGNAL / 01</span><span class="visual-line"></span></div>
+            <div class="system-visual" aria-hidden="true"><span class="visual-grid"></span><span class="visual-orbit"></span><span class="visual-line"></span></div>
             <span class="system-tile one" aria-hidden="true"></span><span class="system-tile two" aria-hidden="true"></span><span class="system-tile three" aria-hidden="true"></span>
           </section>
           <div class="outside-mark">01 — 04</div>

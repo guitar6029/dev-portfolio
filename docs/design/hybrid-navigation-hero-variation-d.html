@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Variation D — System Artifact Hero</title>
+    <style>
+      :root { --ink:#050606; --black:#0a0c0c; --panel:#15191a; --panel-2:#1e2425; --silver:#e2e5e1; --muted:#8b9794; --steel:#a9b7b4; --oxide:#b37a60; --line:rgb(226 229 225 / 24%); --display:"Arial Narrow","Helvetica Neue",Arial,sans-serif; --body:Inter,ui-sans-serif,system-ui,-apple-system,sans-serif; }
+      * { box-sizing:border-box; }
+      html { background:var(--ink); color:var(--silver); }
+      body { margin:0; padding:42px; background:var(--ink); color:var(--silver); font-family:var(--body); }
+      h1,h2,p { margin:0; }
+      .eyebrow,.label,.nav,.button,.caption { font-size:10px; letter-spacing:.16em; line-height:1.2; text-transform:uppercase; }
+      .eyebrow,.label,.caption { color:var(--muted); }
+      .intro,.board,.notes { max-width:1500px; margin-left:auto; margin-right:auto; }
+      .intro { margin-bottom:38px; }
+      .intro h1 { max-width:930px; margin-top:12px; font-family:var(--display); font-size:clamp(42px,6vw,90px); font-weight:800; letter-spacing:-.08em; line-height:.84; text-transform:uppercase; }
+      .intro p { max-width:620px; margin-top:18px; color:var(--muted); line-height:1.6; }
+      .board-title { display:flex; align-items:baseline; justify-content:space-between; margin-bottom:16px; }
+      .board-title h2 { font-family:var(--display); font-size:20px; letter-spacing:-.02em; text-transform:uppercase; }
+      .board-title span { color:var(--muted); font-size:11px; letter-spacing:.12em; text-transform:uppercase; }
+      .artboards { display:grid; grid-template-columns:minmax(0,1fr) 390px; gap:22px; align-items:start; }
+      .frame { position:relative; min-height:740px; overflow:hidden; isolation:isolate; background:linear-gradient(145deg,#090b0b,#121717); border:1px solid var(--line); box-shadow:0 28px 70px rgb(0 0 0 / 30%); }
+      .frame.mobile { min-height:844px; max-width:390px; }
+      .nav { position:absolute; z-index:8; top:0; left:0; right:0; display:flex; align-items:center; justify-content:space-between; min-height:72px; padding:0 30px; border-bottom:1px solid var(--line); background:rgb(5 6 6 / 86%); }
+      .brand { color:var(--silver); font-weight:700; letter-spacing:.12em; }
+      .brand small { display:block; margin-top:5px; color:var(--muted); font-size:8px; font-weight:400; letter-spacing:.18em; }
+      .nav-links { display:flex; gap:25px; color:var(--muted); }
+      .nav-links .active { color:var(--silver); }
+      .nav-links .active::after { content:""; display:inline-block; width:18px; margin-left:8px; border-top:1px solid var(--steel); vertical-align:middle; }
+      .menu-button { display:none; color:var(--silver); }
+      .artifact-shell { position:absolute; top:126px; right:8%; bottom:8%; left:8%; background:var(--black); border:1px solid rgb(226 229 225 / 16%); }
+      .artifact-shell::before { content:""; position:absolute; inset:18px; border:1px solid rgb(226 229 225 / 10%); pointer-events:none; }
+      .vertical-rail { position:absolute; z-index:3; top:18px; bottom:18px; left:18px; width:48px; display:flex; flex-direction:column; align-items:center; justify-content:space-between; padding:22px 0; border-right:1px solid var(--line); color:var(--muted); }
+      .rail-symbol { width:21px; height:21px; border:1px solid var(--silver); border-radius:50%; }
+      .rail-symbol::after { content:""; display:block; width:5px; height:5px; margin:7px; background:var(--oxide); border-radius:50%; }
+      .rail-word { writing-mode:vertical-rl; transform:rotate(180deg); font-size:9px; letter-spacing:.18em; }
+      .rail-index { font-size:9px; }
+      .artifact { position:absolute; top:72px; right:12%; width:58%; aspect-ratio:1; background:#111617; border:1px solid rgb(226 229 225 / 28%); box-shadow:0 18px 35px rgb(0 0 0 / 28%); }
+      .artifact::before { content:""; position:absolute; inset:12%; border:1px solid rgb(169 183 180 / 40%); transform:rotate(45deg); }
+      .artifact::after { content:""; position:absolute; top:8%; bottom:8%; left:50%; border-left:1px solid rgb(169 183 180 / 22%); }
+      .artifact-grid { position:absolute; inset:15%; background:linear-gradient(90deg,transparent 49.5%,rgb(169 183 180 / 18%) 50%,transparent 50.5%),linear-gradient(transparent 49.5%,rgb(169 183 180 / 18%) 50%,transparent 50.5%); }
+      .orbit { position:absolute; top:29%; left:28%; width:44%; aspect-ratio:1; border:1px solid var(--steel); border-radius:50%; }
+      .orbit::before { content:""; position:absolute; inset:23%; border:1px solid rgb(169 183 180 / 70%); border-radius:50%; }
+      .orbit::after { content:""; position:absolute; top:50%; left:-15%; width:130%; border-top:1px solid var(--oxide); transform:rotate(-24deg); }
+      .artifact-marker { position:absolute; top:14%; right:13%; width:9px; height:9px; background:var(--oxide); border-radius:50%; }
+      .artifact-label { position:absolute; left:12%; bottom:12%; color:var(--muted); font-size:9px; letter-spacing:.14em; }
+      .hero-copy { position:absolute; z-index:4; left:90px; right:10%; bottom:54px; }
+      .hero-copy .label { color:var(--steel); }
+      .hero-copy h2 { margin:18px 0 12px; font-family:var(--display); font-size:clamp(84px,11vw,164px); font-weight:800; letter-spacing:-.1em; line-height:.77; text-transform:uppercase; }
+      .hero-copy .role { max-width:440px; color:var(--silver); font-size:16px; line-height:1.4; }
+      .hero-copy .body { max-width:410px; margin-top:12px; color:var(--muted); font-size:12px; line-height:1.55; }
+      .actions { display:flex; gap:8px; margin-top:22px; }
+      .button { display:inline-flex; align-items:center; min-height:36px; padding:0 12px; border:1px solid var(--line); color:var(--silver); text-decoration:none; }
+      .button.primary { background:var(--silver); color:var(--ink); border-color:var(--silver); }
+      .caption-mark { position:absolute; right:30px; bottom:28px; color:var(--muted); font-size:10px; letter-spacing:.14em; }
+      .mobile .nav { min-height:62px; padding:0 20px; }
+      .mobile .nav-links { display:none; }
+      .mobile .menu-button { display:block; }
+      .mobile .artifact-shell { top:96px; right:16px; bottom:16px; left:16px; }
+      .mobile .vertical-rail { top:16px; bottom:16px; left:12px; width:42px; }
+      .mobile .artifact { top:38px; right:18px; width:calc(100% - 82px); }
+      .mobile .hero-copy { left:72px; right:18px; bottom:46px; }
+      .mobile .hero-copy h2 { margin:14px 0 12px; font-size:72px; }
+      .mobile .hero-copy .role { font-size:14px; }
+      .mobile .hero-copy .body { font-size:11px; }
+      .mobile .actions { display:grid; grid-template-columns:1fr; gap:7px; margin-top:17px; }
+      .mobile .button { justify-content:center; min-height:34px; }
+      .mobile .artifact-label { font-size:8px; }
+      .mobile .caption-mark { right:20px; bottom:22px; }
+      .notes { margin-top:24px; padding:20px 0 70px; border-top:1px solid var(--line); color:var(--muted); font-size:12px; line-height:1.6; }
+      .notes strong { color:var(--silver); }
+      @media (max-width:900px) { body{padding:24px 14px;} .artboards{grid-template-columns:1fr;} .frame.mobile{justify-self:center;} }
+    </style>
+  </head>
+  <body>
+    <header class="intro">
+      <div class="eyebrow">D2 / ALTERNATE EXPLORATION / SYSTEM ARTIFACT HERO</div>
+      <h1>One system.<br />Clearly composed.</h1>
+      <p>A new direction inspired by the supplied reference’s centered square artifact, vertical index rail, sparse orbital diagram, and oversized title lockup. It stays abstract and professional: no portrait, character, robot, or product claim.</p>
+    </header>
+    <main class="board">
+      <div class="board-title"><h2>Variation D / System artifact</h2><span>Desktop + mobile</span></div>
+      <div class="artboards">
+        <article class="frame" aria-label="Variation D desktop mockup">
+          <nav class="nav" aria-label="Desktop navigation mockup"><div class="brand">JOSH SOLL<small>SOFTWARE ENGINEER</small></div><div class="nav-links"><span class="active">WORK</span><span>ABOUT</span><span>RÉSUMÉ</span><span>CONTACT</span></div></nav>
+          <section class="artifact-shell" aria-label="System artifact hero composition">
+            <div class="vertical-rail" aria-hidden="true"><span class="rail-symbol"></span><span class="rail-word">SYSTEM / 01</span><span class="rail-index">01 / 04</span></div>
+            <div class="artifact" aria-hidden="true"><span class="artifact-grid"></span><span class="orbit"></span><span class="artifact-marker"></span><span class="artifact-label">STRUCTURAL INDEX</span></div>
+            <div class="hero-copy"><div class="label">SOFTWARE / INTERFACES / SYSTEMS</div><h2>Josh<br />Soll</h2><p class="role">Software engineer designing calm, reliable interfaces for complex products.</p><p class="body">A considered practice in structure, interaction, and useful detail.</p><div class="actions"><a class="button primary" href="#comparison">View selected work ↗</a><a class="button" href="#comparison">Résumé</a></div></div>
+          </section>
+          <div class="caption-mark">A CLEARER SIGNAL ↓</div>
+        </article>
+        <article class="frame mobile" aria-label="Variation D mobile mockup">
+          <nav class="nav" aria-label="Mobile navigation mockup"><div class="brand">JOSH SOLL<small>SOFTWARE ENGINEER</small></div><div class="menu-button">MENU +</div></nav>
+          <section class="artifact-shell" aria-label="System artifact mobile hero composition">
+            <div class="vertical-rail" aria-hidden="true"><span class="rail-symbol"></span><span class="rail-word">SYSTEM / 01</span><span class="rail-index">01 / 04</span></div>
+            <div class="artifact" aria-hidden="true"><span class="artifact-grid"></span><span class="orbit"></span><span class="artifact-marker"></span><span class="artifact-label">STRUCTURAL INDEX</span></div>
+            <div class="hero-copy"><div class="label">SOFTWARE / SYSTEMS</div><h2>Josh<br />Soll</h2><p class="role">Calm, reliable interfaces for complex products.</p><p class="body">Structure, interaction, useful detail.</p><div class="actions"><a class="button primary" href="#comparison">View selected work ↗</a><a class="button" href="#comparison">Résumé</a></div></div>
+          </section>
+          <div class="caption-mark">01 — 04</div>
+        </article>
+      </div>
+    </main>
+    <footer class="notes" id="comparison"><strong>Design note:</strong> this is an unapproved alternate exploration. It borrows the reference’s centered artifact and sparse technical language while keeping the portfolio’s navigation, software-engineering positioning, and professional restraint.</footer>
+  </body>
+</html>

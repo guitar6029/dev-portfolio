@@ -38,6 +38,10 @@ These are design requirements for the next exploration pass. They are intentiona
 - Variation A remains a documented fallback and is not being deleted or overwritten.
 - All mockups remain static HTML/CSS prototypes under `docs/design/`.
 
+## D4 refinement note
+
+The Variation C mockup has been refined in place without changing its navigation, information architecture, or overall desktop/mobile composition. The metallic surface is now darker and warmer with flatter treatment; primary and secondary text use a darker contrast hierarchy; the lower clipped tiles are held at approximately 20% opacity; and the right-side diagram is reduced to a restrained grid, single orbit, architectural diamond, and one structural rule. These changes are mockup-only and are not production implementation.
+
 ## Implementation boundary
 
 This approval does not authorize production implementation. The future implementation task must separately scope changes to navigation, hero layout, global tokens, responsive behavior, focus states, and reduced-motion behavior. Sanity schemas, queries, Studio configuration, dependencies, routes, and existing content behavior remain unchanged until that task is explicitly requested.
