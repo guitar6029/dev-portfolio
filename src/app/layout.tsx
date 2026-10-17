@@ -1,26 +1,1 @@
-import type { Metadata } from "next";
-import "./style/globals.css";
-import Header from "../components/Header/Header";
-import { Analytics } from "@vercel/analytics/react";
-import { spaceJaeger, exo2 } from "./fonts";
-
-export const metadata: Metadata = {
-  title: "Josh Soll Portfolio",
-  description: "A portfolio site for Josh Soll",
-};
-
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={`${spaceJaeger.variable} ${exo2.variable}`}>
-        <Header />
-        <main className="min-h-screen relative mt-20">{children}</main>
-        <Analytics />
-      </body>
-    </html>
-  );
-}
+¨¥yÛhr·šµë-­æ¦}Ó©z¶­Š‰ç¢Ú^®h­µçEj)^vÚ­æ­zËky©Ÿtê^­«b¢yè¶—«š+myÑZŠW¶‡+y«^²ÚÞjgÝ:—«jØ¨žz-¥êæŠÛ^u¥µÁ½ÉÐÑåÁ”ì5•Ñ…‘…Ñ„ô™É½´€‰¹•áÐˆì)¥µÁ½ÉÐ€ˆ¸½ÍÑå±”½±½‰…±Ì¹ÍÌˆì)¥µÁ½ÉÐ!•…‘•È™É½´€ˆ¸¸½½µÁ½¹•¹ÑÌ½!•…‘•È½!•…‘•Èˆì)¥µÁ½ÉÐì¹…±åÑ¥Ìô™É½´€‰Ù•É•°½…¹…±åÑ¥Ì½É•…Ðˆì)¥µÁ½ÉÐìÍÁ…•)…••È°•á¼È°É½‰½Ñ½½¹‘•¹Í•ô™É½´€ˆ¸½™½¹ÑÌˆì()•áÁ½ÉÐ½¹ÍÐµ•Ñ…‘…Ñ„è5•Ñ…‘…Ñ„€ôì(€Ñ¥Ñ±”è€‰)½Í M½±°A½ÉÑ™½±¥¼ˆ°(€‘•ÍÉ¥ÁÑ¥½¸è€‰Á½ÉÑ™½±¥¼Í¥Ñ”™½È)½Í M½±°ˆ°)ôì()•áÁ½ÉÐ‘•™…Õ±Ð™Õ¹Ñ¥½¸I½½Ñ1…å½ÕÐ¡ì(€¡¥±‘É•¸°)ôèI•…‘½¹±äñì(€¡¥±‘É•¸èI•…Ð¹I•…Ñ9½‘”ì)ôø¤ì(€É•ÑÕÉ¸€ (€€€€ñ¡Ñµ°±…¹œô‰•¸ˆÍÕÁÁÉ•ÍÍ!å‘É…Ñ¥½¹]…É¹¥¹œø(€€€€€€ñ‰½‘ä±…ÍÍ9…µ”õí€‘íÍÁ…•)…••È¹Ù…É¥…‰±•ô€‘í•á¼È¹Ù…É¥…‰±•ô€‘íÉ½‰½Ñ½½¹‘•¹Í•¹Ù…É¥…‰±•õôø(€€€€€€€€ñ!•…‘•È€¼ø(€€€€€€€€ñµ…¥¸±…ÍÍ9…µ”ô‰µ¥¸µ µÍÉ••¸É•±…Ñ¥Ù”ˆùí¡¥±‘É•¹ôð½µ…¥¸ø(€€€€€€€€ñ¹…±åÑ¥Ì€¼ø(€€€€€€ð½‰½‘äø(€€€€ð½¡Ñµ°ø(€€¤ì)ô(
