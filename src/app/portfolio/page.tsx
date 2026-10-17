@@ -1,18 +1,11 @@
 import Link from "next/link";
-export const dynamic = "force-dynamic";
 
-import { connectToDatabase } from "@/lib/mongodb";
 import AbsoluteWrapper from "@/components/AbsoluteWrapper";
+import { projects } from "@/data/projects";
 
 const COLORS = ["var(--cp-purple)", "var(--blue)", "var(--red)"];
 
 export default async function Projects() {
-  // Connect to the database
-  const { db } = await connectToDatabase();
-
-  // Fetch the list of GitHub projects
-  const projects = await db.collection("github-projects").find({}).toArray();
-
   return (
     <div className="mt-5 flex flex-col p-4 relative">
       <AbsoluteWrapper className="-top-20 left-20 h-screen -z-1">
@@ -46,8 +39,8 @@ export default async function Projects() {
       <div className="mt-12 ml-12 flex flex-col items-center  xl:flex-row xl:flex-wrap gap-50">
         {projects.map((project, index) => (
           <Link
-            href={`/portfolio/${project._id.toString()}`}
-            key={project._id.toString()}
+            href={`/portfolio/${project.slug}`}
+            key={project.slug}
             className="group relative p-4 flex flex-col items-center justify-center gap-12 w-100 min-h-62.5 trns group"
             style={{
               opacity: 0,

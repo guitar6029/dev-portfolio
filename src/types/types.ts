@@ -1,9 +1,10 @@
+import type { TechName } from "./Tech";
+
 export type Project = {
-    id: number,
-    title: string,
-    description: string,
-    image: string,
-    url?: string,
-    github: string,
-    stack?: string[]
-}
+  slug: string;
+  title: string;
+  description: string;
+  github: string;
+  preview?: string;
+  stack: TechName[];
+};
