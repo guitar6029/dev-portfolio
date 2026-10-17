@@ -1,1 +1,47 @@
-¨¥yÛhr·šµë-­æ¦}Ó©z¶­Š‰ç¢Ú^®h­µçEj)^vÚ­æ­zËky©Ÿtê^­«b¢yè¶—«š+myÑZŠW¶‡+y«^²ÚÞjgÝ:—«jØ¨žz-¥êæŠÛ^u¥µÁ½ÉÐ1¥¹¬™É½´€‰¹•áÐ½±¥¹¬ˆì)¥µÁ½ÉÐ!•É½¥ÉÕ¥ÑÉ…Á¡¥Œ™É½´€ˆ¸½!•É½¥ÉÕ¥ÑÉ…Á¡¥Œˆì()•áÁ½ÉÐ‘•™…Õ±Ð™Õ¹Ñ¥½¸!•É¼ ¤ì(€É•ÑÕÉ¸€ (€€€€ñÍ•Ñ¥½¸±…ÍÍ9…µ”ô‰™É…µ•µ¡•É¼ˆ…É¥„µ±…‰•±±•‘‰äô‰¡•É¼µÑ¥Ñ±”ˆø(€€€€€€ñ‘¥Ø±…ÍÍ9…µ”ô‰™É…µ•µ¡•É½}}Í¡•±°ˆø(€€€€€€€€ñ…Í¥‘”±…ÍÍ9…µ”ô‰™É…µ•µ¡•É½}}É…¥°ˆ…É¥„µ¡¥‘‘•¸ô‰ÑÉÕ”ˆø(€€€€€€€€€€ñÍÁ…¸±…ÍÍ9…µ”ô‰™É…µ•µ¡•É½}}É…¥°µÍåµ‰½°ˆ€¼ø(€€€€€€€€€€ñÍÁ…¸±…ÍÍ9…µ”ô‰™É…µ•µ¡•É½}}É…¥°µÝ½ÉˆùMeMQ4€¼€ÀÄð½ÍÁ…¸ø(€€€€€€€€€€ñÍÁ…¸±…ÍÍ9…µ”ô‰™É…µ•µ¡•É½}}É…¥°µ¥¹‘•àˆøÀÄ€¼€ÀÐð½ÍÁ…¸ø(€€€€€€€€ð½…Í¥‘”ø((€€€€€€€€ñ‘¥Ø±…ÍÍ9…µ”ô‰™É…µ•µ¡•É½}}½Áäˆø(€€€€€€€€€€ñÀ±…ÍÍ9…µ”ô‰™É…µ•µ¡•É½}}±…‰•°ˆùM½™ÑÝ…É”€¼%¹Ñ•É™…•Ì€¼MåÍÑ•µÌð½Àø(€€€€€€€€€€ñ Ä¥ô‰¡•É¼µÑ¥Ñ±”ˆ±…ÍÍ9…µ”ô‰™É…µ•µ¡•É½}}Ñ¥Ñ±”ˆø(€€€€€€€€€€€€ñÍÁ…¸ù)=M ð½ÍÁ…¸ø(€€€€€€€€€€€€ñÍÁ…¸ùM=10ð½ÍÁ…¸ø(€€€€€€€€€€ð½ Äø(€€€€€€€€€€ñÀ±…ÍÍ9…µ”ô‰™É…µ•µ¡•É½}}É½±”ˆø(€€€€€€€€€€€M½™ÑÝ…É”•¹¥¹••È‘•Í¥¹¥¹œ…±´°É•±¥…‰±”¥¹Ñ•É™…•Ì™½È½µÁ±•à(€€€€€€€€€€€ÁÉ½‘ÕÑÌ¸(€€€€€€€€€€ð½Àø(€€€€€€€€€€ñÀ±…ÍÍ9…µ”ô‰™É…µ•µ¡•É½}}‰½‘äˆø(€€€€€€€€€€€½¹Í¥‘•É•ÁÉ…Ñ¥”¥¸ÍÑÉÕÑÕÉ”°¥¹Ñ•É…Ñ¥½¸°…¹ÕÍ•™Õ°‘•Ñ…¥°¸(€€€€€€€€€€ð½Àø(€€€€€€€€€€ñ‘¥Ø±…ÍÍ9…µ”ô‰™É…µ•µ¡•É½}}…Ñ¥½¹Ìˆø(€€€€€€€€€€€€ñ1¥¹¬±…ÍÍ9…µ”ô‰™É…µ•µ¡•É½}}‰ÕÑÑ½¸™É…µ•µ¡•É½}}‰ÕÑÑ½¸´µÁÉ¥µ…Éäˆ¡É•˜ôˆ½Á½ÉÑ™½±¥¼ˆø(€€€€€€€€€€€€€Y¥•ÜÍ•±•Ñ•Ý½É¬€ñÍÁ…¸…É¥„µ¡¥‘‘•¸ô‰ÑÉÕ”ˆûŠ\ð½ÍÁ…¸ø(€€€€€€€€€€€€ð½1¥¹¬ø(€€€€€€€€€€€€ñÍÁ…¸(€€€€€€€€€€€€€±…ÍÍ9…µ”ô‰™É…µ•µ¡•É½}}‰ÕÑÑ½¸™É…µ•µ¡•É½}}‰ÕÑÑ½¸´µ‘¥Í…‰±•ˆ(€€€€€€€€€€€€€…É¥„µ‘¥Í…‰±•ô‰ÑÉÕ”ˆ(€€€€€€€€€€€€€Ñ¥Ñ±”ô‰K¥ÍÕ·¤‘•ÍÑ¥¹…Ñ¥½¸¥Ì¹½Ð½¹™¥ÕÉ•ˆ(€€€€€€€€€€€€ø(€€€€€€€€€€€€€K¥ÍÕ·¤(€€€€€€€€€€€€ð½ÍÁ…¸ø(€€€€€€€€€€ð½‘¥Øø(€€€€€€€€ð½‘¥Øø((€€€€€€€€ñ‘¥Ø±…ÍÍ9…µ”ô‰™É…µ•µ¡•É½}}É…Á¡¥Œˆø(€€€€€€€€€€ñ!•É½¥ÉÕ¥ÑÉ…Á¡¥Œ€¼ø(€€€€€€€€ð½‘¥Øø(€€€€€€ð½‘¥Øø(€€€€ð½Í•Ñ¥½¸ø(€€¤ì)ô
+import Link from "next/link";
+import HeroCircuitGraphic from "./HeroCircuitGraphic";
+
+export default function Hero() {
+  return (
+    <section className="framed-hero" aria-labelledby="hero-title">
+      <div className="framed-hero__shell">
+        <aside className="framed-hero__rail" aria-hidden="true">
+          <span className="framed-hero__rail-symbol" />
+          <span className="framed-hero__rail-word">SYSTEM / 01</span>
+          <span className="framed-hero__rail-index">01 / 04</span>
+        </aside>
+
+        <div className="framed-hero__copy">
+          <p className="framed-hero__label">Software / Interfaces / Systems</p>
+          <h1 id="hero-title" className="framed-hero__title">
+            <span>JOSH</span>
+            <span>SOLL</span>
+          </h1>
+          <p className="framed-hero__role">
+            Software engineer designing calm, reliable interfaces for complex
+            products.
+          </p>
+          <p className="framed-hero__body">
+            A considered practice in structure, interaction, and useful detail.
+          </p>
+          <div className="framed-hero__actions">
+            <Link className="framed-hero__button framed-hero__button--primary" href="/portfolio">
+              View selected work <span aria-hidden="true">â†—</span>
+            </Link>
+            <span
+              className="framed-hero__button framed-hero__button--disabled"
+              aria-disabled="true"
+              title="RÃ©sumÃ© destination is not configured"
+            >
+              RÃ©sumÃ©
+            </span>
+          </div>
+        </div>
+
+        <div className="framed-hero__graphic">
+          <HeroCircuitGraphic />
+        </div>
+      </div>
+    </section>
+  );
+}
