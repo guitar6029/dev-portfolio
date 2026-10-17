@@ -1,12 +1,17 @@
 import AbsoluteWrapper from "@/components/AbsoluteWrapper";
 
+import Image from "next/image";
+import { PortableText } from "@portabletext/react";
 import PanelB from "@/components/Accents/PanelB";
 import TechIcon from "@/components/TechIcon";
-import { projects } from "@/data/projects";
-import type { Project } from "@/types/types";
+import { getProjectBySlug, getProjects } from "@/sanity/queries";
+import { urlFor } from "@/sanity/image";
+import type { SanityProject } from "@/sanity/types";
+import type { TechName } from "@/types/Tech";
 import { notFound } from "next/navigation";
 
-export function generateStaticParams() {
+export async function generateStaticParams() {
+  const projects = await getProjects();
   return projects.map((project) => ({ slug: project.slug }));
 }
 
@@ -16,8 +21,8 @@ export default async function Project({
   params: Promise<{ slug: string }>;
 }) {
   const resolvedParams = await params;
-  const project: Project | undefined = projects.find(
-    (candidate) => candidate.slug === resolvedParams.slug,
+  const project: SanityProject | null = await getProjectBySlug(
+    resolvedParams.slug,
   );
 
   if (!project) notFound();
@@ -95,7 +100,22 @@ export default async function Project({
           })}
           <h1 className="text-6xl font-space text-(--blue)">{project.title}</h1>
         </div>
-        <p className="text-3xl max-w-4xl">{project.description}</p>
+        {project.coverImage?.asset && (
+          <Image
+            src={urlFor(project.coverImage).width(1200).height(675).url()}
+            alt={project.coverImage.alt ?? project.title}
+            width={1200}
+            height={675}
+            className="max-w-4xl h-auto"
+          />
+        )}
+        {project.detailedDescription ? (
+          <div className="text-3xl max-w-4xl">
+            <PortableText value={project.detailedDescription} />
+          </div>
+        ) : (
+          <p className="text-3xl max-w-4xl">{project.shortDescription}</p>
+        )}
         <div className="flex items-center gap-2 text-4xl font-bold font-space text-(--blue) ">
           <TechIcon name={"tools"} />
           Tools Used
@@ -110,24 +130,32 @@ export default async function Project({
                 <PanelB strokeWidth={2} />
               </div>
               <div className="z-10 flex flex-row items-center gap-2">
-                <TechIcon name={tech} />
+                <TechIcon name={tech as TechName} />
                 <span className="capitalize">{tech}</span>
               </div>
             </div>
           ))}
         </div>
-        <div className="flex flex-row justify-center items-center gap-2 rounded-xl p-4trns min-w-100">
-          <a
-            href={project.github}
-            target="_blank"
-            className="w-full flex items-center justify-center font-bold hover:text-(--cp-purple) trns"
-          >
-            <TechIcon name="github" className="text-4xl" />
-          </a>
-        </div>
-        {project.preview && (
+        {project.githubUrl && (
+          <div className="flex flex-row justify-center items-center gap-2 rounded-xl p-4trns min-w-100">
+            <a
+              href={project.githubUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="w-full flex items-center justify-center font-bold hover:text-(--cp-purple) trns"
+            >
+              <TechIcon name="github" className="text-4xl" />
+            </a>
+          </div>
+        )}
+        {project.liveDemoUrl && (
           <div className="flex flex-row justify-center items-center gap-2 rounded-xl p-4 trns min-w-100 hover:text-(--cp-purple) trns">
-            <a href={project.preview} target="_blank" className="font-bold">
+            <a
+              href={project.liveDemoUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="font-bold"
+            >
               Preview
             </a>
           </div>
