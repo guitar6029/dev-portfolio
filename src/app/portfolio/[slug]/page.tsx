@@ -4,7 +4,7 @@ import Image from "next/image";
 import { PortableText } from "@portabletext/react";
 import PanelB from "@/components/Accents/PanelB";
 import TechIcon from "@/components/TechIcon";
-import { getProjectBySlug, getProjects } from "@/sanity/queries";
+import { getProjectBySlug, getProjects } from "@/sanity/queries/projects";
 import { urlFor } from "@/sanity/image";
 import type { SanityProject } from "@/sanity/types";
 import type { TechName } from "@/types/Tech";

@@ -1,5 +1,5 @@
-import { sanityClient } from "./client";
-import type { SanityProject } from "./types";
+import { sanityClient } from "../client";
+import type { SanityProject } from "../types";
 
 const projectProjection = `{
   _id,

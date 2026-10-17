@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 import AbsoluteWrapper from "@/components/AbsoluteWrapper";
-import { getProjects } from "@/sanity/queries";
+import { getProjects } from "@/sanity/queries/projects";
 
 const COLORS = ["var(--cp-purple)", "var(--blue)", "var(--red)"];
 
