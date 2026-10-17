@@ -1,15 +1,17 @@
 import Link from "next/link";
 import HeroCircuitGraphic from "./HeroCircuitGraphic";
+import SectionRail from "./ui/SectionRail";
 
 export default function Hero() {
   return (
     <section className="framed-hero" aria-labelledby="hero-title">
       <div className="framed-hero__shell">
-        <aside className="framed-hero__rail" aria-hidden="true">
-          <span className="framed-hero__rail-symbol" />
-          <span className="framed-hero__rail-word">SYSTEM / 01</span>
-          <span className="framed-hero__rail-index">01 / 04</span>
-        </aside>
+        <SectionRail
+          label="SYSTEM"
+          index="01"
+          total="04"
+          className="section-rail--hero"
+        />
 
         <div className="framed-hero__copy">
           <p className="framed-hero__label">Software / Interfaces / Systems</p>

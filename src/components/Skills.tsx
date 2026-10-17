@@ -1,11 +1,14 @@
+import SectionRail from "./ui/SectionRail";
+
 export default function Skills() {
   return (
     <section className="engineering-capabilities" aria-labelledby="skills-heading">
-      <div className="engineering-capabilities__rail" aria-hidden="true">
-        <span className="engineering-capabilities__rail-symbol" />
-        <span className="engineering-capabilities__rail-word">SYSTEM / 02</span>
-        <span className="engineering-capabilities__rail-index">02 / 04</span>
-      </div>
+      <SectionRail
+        label="SYSTEM"
+        index="02"
+        total="04"
+        className="section-rail--section"
+      />
       <div className="engineering-capabilities__inner">
         <header className="engineering-capabilities__intro">
           <p className="engineering-capabilities__eyebrow">02 / ENGINEERING</p>
