@@ -1,9 +1,9 @@
-import { NextStudio, metadata, viewport } from "next-sanity/studio";
+import { metadata, viewport } from "next-sanity/studio";
 
-import config from "../../../../sanity.config";
+import Studio from "./Studio";
 
 export { metadata, viewport };
 
 export default function StudioPage() {
-  return <NextStudio config={config} />;
+  return <Studio />;
 }
