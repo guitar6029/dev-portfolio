@@ -15,7 +15,6 @@ import {
   SiZod,
 } from "react-icons/si";
 import { FaDocker } from "react-icons/fa";
-import { DiMongodb } from "react-icons/di";
 import {
   RiBlenderLine,
   RiBootstrapFill,
@@ -44,7 +43,6 @@ const ICON_MAP: Record<TechName, JSX.Element> = {
   jest: <SiJest />,
   jsonserver: <BsFiletypeJson />,
   linkedin: <RiLinkedinFill />,
-  mongodb: <DiMongodb />,
   next: <SiNextdotjs />,
   nodejs: <SiNodedotjs />,
   nuxt: <SiNuxt />,

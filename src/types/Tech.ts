@@ -11,7 +11,6 @@ export type TechName =
   | "jest"
   | "jsonserver"
   | "linkedin"
-  | "mongodb"
   | "next"
   | "nodejs"
   | "nuxt"

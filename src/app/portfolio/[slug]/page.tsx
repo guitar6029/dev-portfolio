@@ -1,55 +1,26 @@
 import AbsoluteWrapper from "@/components/AbsoluteWrapper";
-export const dynamic = "force-dynamic";
 
-import BoxA from "@/components/Accents/BoxA";
 import PanelB from "@/components/Accents/PanelB";
 import TechIcon from "@/components/TechIcon";
-import { connectToDatabase } from "@/lib/mongodb";
-import { TechName } from "@/types/Tech";
-import { ObjectId } from "mongodb";
-import Link from "next/link";
+import { projects } from "@/data/projects";
+import type { Project } from "@/types/types";
+import { notFound } from "next/navigation";
+
+export function generateStaticParams() {
+  return projects.map((project) => ({ slug: project.slug }));
+}
+
 export default async function Project({
   params,
 }: {
-  params: Promise<{ _id: string }>;
+  params: Promise<{ slug: string }>;
 }) {
   const resolvedParams = await params;
+  const project: Project | undefined = projects.find(
+    (candidate) => candidate.slug === resolvedParams.slug,
+  );
 
-  // Ensure the resolvedParams._id is valid
-  if (!resolvedParams._id || !ObjectId.isValid(resolvedParams._id)) {
-    return (
-      <div className="min-h-screen flex flex-col gap-4 items-center justify-center">
-        <h1 className="text-4xl font-bold text-amber-400">Project Not Found</h1>
-        <Link
-          href={"/portfolio"}
-          className="text-2xl p-3 md:w-60 md:text-center rounded-xl bg-amber-50 text-black hover:bg-amber-500 transition duration-300 ease-in"
-        >
-          Portfolio
-        </Link>
-      </div>
-    );
-  }
-
-  const { db } = await connectToDatabase();
-
-  // Fetch project from the database
-  const project = await db
-    .collection("github-projects")
-    .findOne({ _id: new ObjectId(resolvedParams._id) });
-
-  if (!project) {
-    return (
-      <div className="min-h-screen flex flex-col gap-4items-center justify-center">
-        <h1 className="text-4xl font-bold text-(--blue)">Project Not Found</h1>
-        <Link
-          href={"/projects"}
-          className="text-2xl p-3 md:w-60 md:text-center rounded-xl  text-black hover:bg-amber-500 transition duration-300 ease-in"
-        >
-          Portfolio
-        </Link>
-      </div>
-    );
-  }
+  if (!project) notFound();
 
   return (
     <div className="relative mt-10 p-4 flex flex-col items-center justify-center gap-3 animate-slide-in-right">
@@ -130,7 +101,7 @@ export default async function Project({
           Tools Used
         </div>
         <div className="flex flex-col md:flex-row md:flex-wrap md:max-w-4xl md:items-center gap-4 cursor-default">
-          {project.stack.map((tech: string, index: number) => (
+          {project.stack.map((tech, index) => (
             <div
               className="relative group text-xl flex flex-row items-center gap-2 justify-center p-4 min-w-55 h-50 animate-slide-in-left"
               key={index}
@@ -139,7 +110,7 @@ export default async function Project({
                 <PanelB strokeWidth={2} />
               </div>
               <div className="z-10 flex flex-row items-center gap-2">
-                <TechIcon name={tech as TechName} />
+                <TechIcon name={tech} />
                 <span className="capitalize">{tech}</span>
               </div>
             </div>
@@ -151,7 +122,7 @@ export default async function Project({
             target="_blank"
             className="w-full flex items-center justify-center font-bold hover:text-(--cp-purple) trns"
           >
-            <TechIcon name={"github" as TechName} className="text-4xl" />
+            <TechIcon name="github" className="text-4xl" />
           </a>
         </div>
         {project.preview && (
