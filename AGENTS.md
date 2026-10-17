@@ -1,5 +1,43 @@
 # Agent Instructions
 
+
+
+## Node.js and npm environment
+
+This repository uses Node.js 22, defined in `.nvmrc`.
+
+Before running npm commands:
+
+1. Check whether Node.js and npm are available.
+2. If either is unavailable, initialize NVM and run `nvm use`.
+3. Verify Node.js and npm versions before continuing.
+4. Never report npm as unavailable without attempting NVM initialization.
+
+For Linux environments using Bash:
+
+```bash
+export NVM_DIR="${NVM_DIR:-$HOME/.nvm}"
+if [ -s "$NVM_DIR/nvm.sh" ]; then
+  . "$NVM_DIR/nvm.sh"
+fi
+
+nvm use 22
+node --version
+npm --version
+```
+
+Then run the required validation:
+
+```bash
+npm ci
+npm run lint
+npm run typecheck
+npm run build
+```
+
+If NVM initialization fails, report the exact error and environment limitation. Do not claim validation passed when it was skipped.
+
+
 Read this file before performing any repository task. Follow more specific nested AGENTS.md files when working in their directories.
 
 ## Workflow and Git safety
