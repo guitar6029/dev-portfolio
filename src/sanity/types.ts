@@ -18,3 +18,14 @@ export type SanityProject = {
   featured: boolean;
   displayOrder?: number;
 };
+
+export type SanityWorkExperience = {
+  _id: string;
+  title: string;
+  company: string;
+  startYear: number;
+  endYear?: number;
+  currentlyEmployed: boolean;
+  summary: string;
+  highlights?: string[];
+};
