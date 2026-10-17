@@ -1,5 +1,47 @@
 # Agent Instructions
 
+## Git Branch and Worktree Policy
+
+**Read this file before performing any repository operation.**
+
+### Branch isolation
+
+- Never modify, commit, or push directly to `main`.
+- Always create a dedicated feature branch from the latest `origin/main`.
+- Use descriptive branch names, such as `feat/portfolio-about-redesign`.
+
+### Worktree selection
+
+- **Single-agent workflow:** Use a dedicated feature branch in an appropriate working directory. A new worktree is optional.
+- **Parallel-agent workflow:** Each agent must use a dedicated Git worktree and its own feature branch.
+- Reuse an existing assigned worktree when continuing a task.
+- Never switch or reset a branch belonging to another active agent.
+- If the current checkout is `main`, create or switch to a safe feature branch before modifying files.
+
+### Remote tracking
+
+- Feature branches must never track `origin/main` as their upstream.
+- When pushing a new feature branch, use:
+
+  `git push -u origin HEAD`
+
+- Verify the upstream using:
+
+  `git branch -vv`
+
+- Never use Git push or VS Code Sync when the configured upstream is incorrect.
+- Never force-push unless explicitly authorized.
+
+### Pull requests
+
+- All feature work must be merged through pull requests targeting `main`.
+- Run relevant validation before opening a PR.
+- Do not merge a PR without explicit approval.
+
+### Cleanup
+
+- After a PR is merged, remove obsolete branches and worktrees only after confirming they contain no uncommitted or unmerged work.
+- Never delete another agent's active worktree.
 
 
 ## Node.js and npm environment
