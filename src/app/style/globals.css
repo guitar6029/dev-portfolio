@@ -568,6 +568,146 @@ body {
   }
 }
 
+/* Not found boundary */
+.not-found-screen {
+  position: relative;
+  display: grid;
+  min-height: calc(100svh - 4.5rem);
+  place-items: center;
+  overflow: hidden;
+  padding: 1.5rem;
+  background: #070808;
+  color: #e3e6e2;
+}
+
+.not-found-screen::before,
+.not-found-screen::after {
+  position: absolute;
+  background: rgb(226 229 225 / 10%);
+  content: "";
+}
+
+.not-found-screen::before {
+  top: 0;
+  bottom: 0;
+  left: clamp(1.25rem, 7vw, 7rem);
+  width: 1px;
+}
+
+.not-found-screen::after {
+  top: clamp(1.5rem, 8vw, 6rem);
+  right: 0;
+  left: 0;
+  height: 1px;
+}
+
+.not-found-screen__frame {
+  position: relative;
+  display: flex;
+  width: min(40rem, 100%);
+  flex-direction: column;
+  align-items: center;
+  padding: clamp(2.75rem, 8vw, 5.5rem) clamp(1.5rem, 6vw, 3.5rem);
+  border: 1px solid rgb(226 229 225 / 18%);
+  background: rgb(11 15 20 / 68%);
+  text-align: center;
+}
+
+.not-found-screen__corner {
+  position: absolute;
+  width: 2.8rem;
+  height: 2.8rem;
+  border-color: #aab5b3;
+  border-style: solid;
+}
+
+.not-found-screen__corner--top {
+  top: -1px;
+  left: -1px;
+  border-width: 1px 0 0 1px;
+}
+
+.not-found-screen__corner--bottom {
+  right: -1px;
+  bottom: -1px;
+  border-width: 0 1px 1px 0;
+}
+
+.not-found-screen__label {
+  margin: 0;
+  color: #aab5b3;
+  font-family: var(--font-exo2), sans-serif;
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.not-found-screen__title {
+  margin: 1rem 0 1.6rem;
+  color: #eef0ec;
+  font-family: var(--font-hero-display), "Arial Narrow", sans-serif;
+  font-size: clamp(4rem, 14vw, 8rem);
+  font-weight: 800;
+  letter-spacing: -0.08em;
+  line-height: 0.8;
+  text-transform: uppercase;
+}
+
+.not-found-screen__description {
+  max-width: 25rem;
+  margin: 0;
+  color: #aab5b3;
+  font-family: var(--font-exo2), sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+.not-found-screen__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.55rem;
+  margin-top: 1.8rem;
+}
+
+@media (max-width: 640px) {
+  .not-found-screen {
+    min-height: calc(100svh - 4rem);
+    padding: 1rem;
+  }
+
+  .not-found-screen__frame {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+
+  .not-found-screen__label {
+    font-size: 0.57rem;
+    letter-spacing: 0.15em;
+  }
+
+  .not-found-screen__title {
+    font-size: clamp(3.6rem, 17vw, 6rem);
+  }
+
+  .not-found-screen__description {
+    max-width: 17rem;
+    font-size: 0.85rem;
+  }
+
+  .not-found-screen__actions {
+    width: min(18rem, 100%);
+    flex-direction: column;
+  }
+
+  .not-found-screen__actions .framed-hero__button {
+    justify-content: center;
+    min-height: 2.35rem;
+  }
+}
+
 /* Projects listing */
 .projects-page {
   position: relative;
