@@ -1260,8 +1260,7 @@ main {
     min-height: 100svh;
     overflow-y: auto;
     overscroll-behavior: contain;
-    padding: max(1.25rem, env(safe-area-inset-top)) 1.25rem
-      max(1.5rem, env(safe-area-inset-bottom));
+    padding: max(1.25rem, env(safe-area-inset-top)) 1.25rem max(1.5rem, env(safe-area-inset-bottom));
     border-left: 1px solid rgb(226 229 225 / 28%);
     background: #181614;
     box-shadow: -1.5rem 0 3rem rgb(0 0 0 / 38%);
@@ -1310,7 +1309,7 @@ main {
     height: 100%;
     border: 0;
     padding: 0;
-    background: rgb(0 0 0 / 68%);
+    /* background: rgb(0 0 0 / 68%); */
     cursor: default;
     transition: opacity 220ms ease;
   }
@@ -1448,6 +1447,7 @@ main {
 }
 
 @media (max-width: 900px) and (prefers-reduced-motion: reduce) {
+
   .site-header__experiment .site-header__nav,
   .site-header__mobile-backdrop {
     transition: none;
