@@ -72,11 +72,5 @@ export const project = defineType({
       type: "boolean",
       initialValue: false,
     }),
-    defineField({
-      name: "displayOrder",
-      title: "Display order",
-      type: "number",
-      validation: (rule) => rule.integer().min(0),
-    }),
   ],
 });

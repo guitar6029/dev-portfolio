@@ -11,8 +11,7 @@ const projectProjection = `{
   stack,
   githubUrl,
   liveDemoUrl,
-  featured,
-  displayOrder
+  featured
 }`;
 
 const fetchOptions = {
@@ -23,7 +22,7 @@ export async function getProjects(): Promise<SanityProject[]> {
   try {
     return await sanityClient.fetch<SanityProject[]>(
       `*[_type == "project" && !(_id in path("drafts.**"))]
-        | order(coalesce(displayOrder, 999999) asc, title asc)
+        | order(_createdAt desc, _id asc)
         ${projectProjection}`,
       {},
       fetchOptions,
