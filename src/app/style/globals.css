@@ -272,8 +272,9 @@ main {
 
 .framed-hero__shell {
   position: relative;
-  display: grid;
-  grid-template-columns: minmax(0, 0.9fr) minmax(20rem, 1fr);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   height: 100%;
   min-height: 0;
@@ -286,10 +287,8 @@ main {
 }
 
 .framed-hero__copy {
-  grid-column: 1;
-  grid-row: 1;
   z-index: 3;
-  align-self: end;
+  width: min(100%, 31rem);
   max-width: 31rem;
   padding: 2rem 1.5rem 4.2rem clamp(3.5rem, 6vw, 5.5rem);
 }
@@ -297,10 +296,12 @@ main {
 @media (min-width: 901px) {
   .framed-hero__copy {
     width: min(100%, 31rem);
-    align-self: center;
-    justify-self: center;
     padding: 2rem 1.5rem;
     text-align: center;
+  }
+
+  .framed-hero__title {
+    align-items: center;
   }
 
   .framed-hero__copy .framed-hero__role,
@@ -1202,33 +1203,6 @@ main {
   }
 }
 
-.framed-hero__graphic {
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  right: 20;
-  bottom: 0;
-  left: 42%;
-  width: auto;
-  height: 100%;
-  margin: 0;
-  overflow: hidden;
-  background: transparent;
-}
-
-.framed-hero__circuit {
-  position: absolute;
-  top: 0;
-  right: -8rem;
-  display: block;
-  width: clamp(44rem, 58vw, 68rem);
-  min-width: 44rem;
-  max-width: none;
-  height: 100%;
-  padding: clamp(1rem, 7vw, 4rem) clamp(1rem, 5vw, 3rem);
-  opacity: 0.82;
-}
-
 @media (max-width: 900px) {
   .site-side-panels__panel {
     width: clamp(8rem, 18vw, 11rem);
@@ -1392,10 +1366,19 @@ main {
   }
 
   .framed-hero__copy {
-    grid-column: 1;
-    grid-row: 1;
     max-width: none;
-    padding: 1.8rem 0.6rem 0 4rem;
+    padding: 1.8rem 1rem 0;
+    text-align: center;
+  }
+
+  .framed-hero__title {
+    align-items: center;
+  }
+
+  .framed-hero__role,
+  .framed-hero__body {
+    margin-right: auto;
+    margin-left: auto;
   }
 
   .framed-hero__title {
@@ -1417,30 +1400,14 @@ main {
     display: grid;
     grid-template-columns: 1fr;
     max-width: 18rem;
+    margin-right: auto;
+    margin-left: auto;
     gap: 0.45rem;
   }
 
   .framed-hero__button {
     justify-content: center;
     min-height: 2.35rem;
-  }
-
-  .framed-hero__graphic {
-    top: 0;
-    right: 0;
-    bottom: auto;
-    left: auto;
-    width: min(100%, 30rem);
-    height: 18rem;
-    margin: 0;
-    opacity: 0.3;
-  }
-
-  .framed-hero__circuit {
-    right: -7rem;
-    width: 32rem;
-    min-width: 32rem;
-    height: 100%;
   }
 
 }
@@ -1460,20 +1427,6 @@ main {
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
-  .framed-hero__graphic {
-    right: 0;
-    left: 30%;
-    width: auto;
-    height: 100%;
-    opacity: 0.5;
-  }
-
-  .framed-hero__circuit {
-    right: -6rem;
-    width: 44rem;
-    min-width: 44rem;
-  }
-
   .framed-hero__title {
     font-size: clamp(6rem, 11vw, 8.75rem);
   }

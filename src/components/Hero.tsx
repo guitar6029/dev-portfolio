@@ -1,5 +1,4 @@
 import Link from "next/link";
-import HeroCircuitGraphic from "./HeroCircuitGraphic";
 
 export default function Hero() {
   return (
@@ -32,9 +31,6 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="framed-hero__graphic">
-          <HeroCircuitGraphic />
-        </div>
       </div>
     </section>
   );
