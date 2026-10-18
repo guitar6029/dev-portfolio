@@ -651,12 +651,10 @@ body {
   position: relative;
   z-index: 1;
   min-width: 0;
-  background: linear-gradient(
-    90deg,
-    rgb(7 8 8 / 96%) 0%,
-    rgb(7 8 8 / 88%) 72%,
-    rgb(7 8 8 / 0%) 100%
-  );
+  background: linear-gradient(90deg,
+      rgb(7 8 8 / 96%) 0%,
+      rgb(7 8 8 / 88%) 72%,
+      rgb(7 8 8 / 0%) 100%);
 }
 
 .projects-page__art {
@@ -939,7 +937,7 @@ body {
   margin: 0;
 }
 
-.project-detail__description p + p,
+.project-detail__description p+p,
 .project-detail__description h2,
 .project-detail__description h3,
 .project-detail__description ul,
@@ -986,7 +984,7 @@ body {
   padding: 1.25rem 0 1.5rem;
 }
 
-.project-detail__meta-section + .project-detail__meta-section {
+.project-detail__meta-section+.project-detail__meta-section {
   border-top: 1px solid rgb(226 229 225 / 16%);
 }
 
@@ -1015,6 +1013,14 @@ body {
   flex-wrap: wrap;
   gap: 0.45rem 0.85rem;
   color: #c2c9c5;
+}
+
+.project-detail__stack li {
+  transition: color 200ms ease-in-out;
+}
+
+.project-detail__stack li:hover {
+  color: #eef0ec;
 }
 
 .project-detail__links {
@@ -1119,7 +1125,7 @@ body {
   position: absolute;
   z-index: 1;
   top: 0;
-  right: 0;
+  right: 20;
   bottom: 0;
   left: 42%;
   width: auto;
