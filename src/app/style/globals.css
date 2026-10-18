@@ -1,54 +1,11 @@
 @import "tailwindcss";
-@import "./animations.css";
 
 :root {
-  /* ---- Carbon Base ---- */
-  --bg: #030507;
-  --bg-panel: #0b0f14;
-
-  --bg-hover: #111825;
-  /* subtle hover background */
-  --bg-hover-strong: #1a2335;
-  /* stronger hover when needed */
-
-  --cp-purple: #b134ff;
-  --cp-purple-light: #ca6bff;
-  --cp-purple-dark: #7b1fb8;
-
   /* ---- Text ---- */
   --text: #e5e7ea;
   --text-muted: #98a0a8;
 
-  --gray: rgb(200, 204, 215);
-
-  /* ---- Neon Blue (Primary) ---- */
   --blue: #4cb1ff;
-  /* main neon */
-  --blue-glow: rgba(76, 177, 255, 0.35);
-  --blue-soft: #2f8bd8;
-  /* softer */
-
-  /* ---- Neon Red (Secondary) ---- */
-  --red: #ff3b61;
-  /* main neon red */
-  --red-glow: rgba(255, 59, 97, 0.35);
-  --red-soft: #e02d52;
-
-  /* ---- Borders ---- */
-  --border-subtle: rgba(255, 255, 255, 0.08);
-  --border-strong: rgba(255, 255, 255, 0.18);
-
-  /* ---- Shadows ---- */
-  --shadow-soft: 0 0 24px rgba(0, 0, 0, 0.4);
-  --shadow-blue: 0 0 26px var(--blue-glow);
-  --shadow-red: 0 0 26px var(--red-glow);
-}
-
-/* Utility Classes */
-@layer utilities {
-  .trns {
-    @apply transition ease-in-out duration-300;
-  }
 }
 
 html {
@@ -60,15 +17,6 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
-}
-
-/* Next/font helpers */
-.font-space {
-  font-family: var(--font-spacejaeger);
-}
-
-.font-exo {
-  font-family: var(--font-exo2);
 }
 
 .font-hero-display {
@@ -84,39 +32,6 @@ body {
   /* Optional generic fallback if no font class is applied */
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     sans-serif;
-}
-
-/* Fade mask for scrolling content */
-.fadeout-horizontal {
-  mask-image: linear-gradient(to right,
-      transparent,
-      black 5rem,
-      black calc(100% - 5rem),
-      transparent);
-}
-
-/* Marquee / scroll text */
-.wrapper {
-  padding: 4.5rem 0;
-  color: var(--text);
-  font-size: 2.5rem;
-}
-
-.scroll-text {
-  overflow: hidden;
-  position: relative;
-}
-
-.scroll-text-track {
-  display: flex;
-  gap: 1rem;
-  width: max-content;
-  animation: move-text 70s linear infinite;
-}
-
-.scroll-text span {
-  border-radius: 5px;
-  padding: 1rem 2.5rem;
 }
 
 /* Scrollbars */
