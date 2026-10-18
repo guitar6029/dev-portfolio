@@ -8,7 +8,7 @@ import { useEffect, useRef, useState } from "react";
 const NAV_ITEMS = [
   { href: "/", label: "Home", kind: "route" },
   { href: "/portfolio", label: "Work", kind: "route" },
-  { href: "/", label: "About", kind: "route" },
+  // { href: "/", label: "About", kind: "route" },
   { href: "#", label: "Résumé", kind: "unavailable" },
   {
     href: "https://www.linkedin.com/in/joshsoll/",
