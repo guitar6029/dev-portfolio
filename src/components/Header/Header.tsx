@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const NAV_ITEMS = [
   { href: "/", label: "Home", kind: "route" },
@@ -20,6 +20,9 @@ const NAV_ITEMS = [
 export default function Header() {
   const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const menuButtonRef = useRef<HTMLButtonElement>(null);
+  const drawerRef = useRef<HTMLElement>(null);
+  const previousFocusedElementRef = useRef<HTMLElement | null>(null);
 
   const isActive = (href: string) => {
     if (href === "/") return pathname === "/";
@@ -30,11 +33,64 @@ export default function Header() {
     (item) => item.kind === "route" && isActive(item.href),
   );
 
+  useEffect(() => {
+    if (!isMenuOpen) return;
+
+    previousFocusedElementRef.current = document.activeElement as HTMLElement;
+    const previousOverflow = document.body.style.overflow;
+    const fallbackMenuButton = menuButtonRef.current;
+    const drawer = drawerRef.current;
+    const focusableSelector = 'a[href], button:not([disabled])';
+    const focusableElements = drawer?.querySelectorAll<HTMLElement>(
+      focusableSelector,
+    );
+    const firstFocusableElement = focusableElements?.[0];
+
+    document.body.style.overflow = "hidden";
+    firstFocusableElement?.focus();
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        event.preventDefault();
+        setIsMenuOpen(false);
+        return;
+      }
+
+      if (event.key !== "Tab" || !drawer) return;
+
+      const currentFocusableElements = drawer.querySelectorAll<HTMLElement>(
+        focusableSelector,
+      );
+      const firstElement = currentFocusableElements[0];
+      const lastElement =
+        currentFocusableElements[currentFocusableElements.length - 1];
+
+      if (!firstElement || !lastElement) {
+        event.preventDefault();
+      } else if (event.shiftKey && document.activeElement === firstElement) {
+        event.preventDefault();
+        lastElement.focus();
+      } else if (!event.shiftKey && document.activeElement === lastElement) {
+        event.preventDefault();
+        firstElement.focus();
+      }
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+      document.body.style.overflow = previousOverflow;
+      (previousFocusedElementRef.current ?? fallbackMenuButton)?.focus();
+    };
+  }, [isMenuOpen]);
+
   return (
     <header className="site-header">
       <div className="site-header__inner">
 
         <button
+          ref={menuButtonRef}
           className="site-header__menu-button"
           type="button"
           aria-controls="primary-navigation"
@@ -42,10 +98,14 @@ export default function Header() {
           aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
           onClick={() => setIsMenuOpen((open) => !open)}
         >
-          <span>{isMenuOpen ? "Close" : "Menu"}</span>
-          <span aria-hidden="true" className="site-header__menu-icon">
-            {isMenuOpen ? "−" : "+"}
-          </span>
+          <Image
+            src="/images/decorations/hamburgerMenu.png"
+            alt=""
+            aria-hidden="true"
+            width={1254}
+            height={1254}
+            className="site-header__menu-image"
+          />
         </button>
 
         <div className="site-header__experiment">
@@ -59,10 +119,19 @@ export default function Header() {
             className="site-header__experiment-art"
           />
           <nav
+            ref={drawerRef}
             id="primary-navigation"
             className={`site-header__nav ${isMenuOpen ? "site-header__nav--open" : ""}`}
             aria-label="Primary navigation"
           >
+            <button
+              className="site-header__drawer-close"
+              type="button"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              <span>Close</span>
+              <span aria-hidden="true">×</span>
+            </button>
             {NAV_ITEMS.map((item, index) => {
               const active = item.kind === "route" && index === activeIndex;
 
@@ -99,6 +168,14 @@ export default function Header() {
             })}
           </nav>
         </div>
+
+        <button
+          className="site-header__mobile-backdrop"
+          type="button"
+          aria-label="Close navigation menu"
+          hidden={!isMenuOpen}
+          onClick={() => setIsMenuOpen(false)}
+        />
       </div>
     </header>
   );
