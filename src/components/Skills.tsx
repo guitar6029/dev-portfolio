@@ -1,14 +1,6 @@
-import SectionRail from "./ui/SectionRail";
-
 export default function Skills() {
   return (
     <section className="engineering-capabilities" aria-labelledby="skills-heading">
-      <SectionRail
-        label="SYSTEM"
-        index="02"
-        total="04"
-        className="section-rail--section"
-      />
       <div className="engineering-capabilities__inner">
         <header className="engineering-capabilities__intro">
           <p className="engineering-capabilities__eyebrow">02 / ENGINEERING</p>
