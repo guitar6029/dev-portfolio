@@ -26,6 +26,15 @@ export default async function Project({
 
   return (
     <section className="project-detail-page" aria-labelledby="project-title">
+      <Image
+        src="/images/decorations/device.png"
+        alt=""
+        aria-hidden="true"
+        width={1254}
+        height={1254}
+        sizes="(max-width: 380px) 0px, (max-width: 540px) 19rem, (max-width: 900px) 38vw, 32rem"
+        className="project-detail__device"
+      />
       <div className="project-detail__inner">
         <nav className="project-detail__back-nav" aria-label="Project navigation">
           <Link href="/portfolio" className="project-detail__back-link">

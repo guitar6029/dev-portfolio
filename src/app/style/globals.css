@@ -820,15 +820,32 @@ body {
 
 /* Project detail */
 .project-detail-page {
+  position: relative;
   min-height: calc(100svh - 4.5rem);
+  overflow: hidden;
   background: #070808;
   color: #e3e6e2;
+  isolation: isolate;
 }
 
 .project-detail__inner {
+  position: relative;
+  z-index: 1;
   width: min(100% - 2rem, 70rem);
   margin: 0 auto;
   padding: clamp(4rem, 9vw, 8rem) 0 clamp(5rem, 10vw, 9rem);
+}
+
+.project-detail__device {
+  position: absolute;
+  z-index: 0;
+  right: clamp(-6rem, -5vw, -2rem);
+  bottom: -5rem;
+  display: block;
+  width: clamp(20rem, 42vw, 34rem);
+  height: auto;
+  opacity: 0.16;
+  pointer-events: none;
 }
 
 .project-detail__back-nav {
@@ -1118,6 +1135,19 @@ body {
 
   .project-detail__body {
     margin-top: 3.5rem;
+  }
+
+  .project-detail__device {
+    right: -4rem;
+    bottom: -3rem;
+    width: 19rem;
+    opacity: 0.1;
+  }
+}
+
+@media (max-width: 380px) {
+  .project-detail__device {
+    display: none;
   }
 }
 
