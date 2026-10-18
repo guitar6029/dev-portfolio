@@ -188,7 +188,7 @@ export default function Header() {
           className="site-side-panels__panel site-side-panels__panel--left"
         />
         <Image
-          src="/images/decorations/sidePanel.png"
+          src="/images/decorations/sidePanel2.png"
           alt=""
           width={724}
           height={2172}

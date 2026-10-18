@@ -89,7 +89,7 @@ body {
 
 .site-side-panels__panel--right {
   right: -4rem;
-  transform: scaleX(-1);
+  width: clamp(10rem, 13vw, 16rem);
 }
 
 main {
@@ -1232,6 +1232,11 @@ main {
 @media (max-width: 900px) {
   .site-side-panels__panel {
     width: clamp(8rem, 18vw, 11rem);
+  }
+
+  .site-side-panels__panel--right {
+    right: -3rem;
+    width: clamp(7rem, 15vw, 10rem);
   }
 
   .site-header__experiment {
