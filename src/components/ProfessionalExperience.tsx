@@ -1,7 +1,6 @@
 import { getWorkExperience } from "@/sanity/queries/professionalExperience";
 import type { SanityWorkExperience } from "@/sanity/types";
 import ProfessionalExperienceEntry from "./ProfessionalExperienceEntry";
-import SectionRail from "./ui/SectionRail";
 
 export default async function ProfessionalExperience() {
   const workExperience = await getWorkExperience();
@@ -12,12 +11,6 @@ export default async function ProfessionalExperience() {
       className="professional-experience"
       aria-labelledby="professional-experience-heading"
     >
-      <SectionRail
-        label="SYSTEM"
-        index="03"
-        total="04"
-        className="section-rail--section"
-      />
       <div className="professional-experience__inner">
         <header className="professional-experience__intro">
           <p className="professional-experience__eyebrow">03 / EXPERIENCE</p>
