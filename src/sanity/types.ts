@@ -16,7 +16,6 @@ export type SanityProject = {
   githubUrl?: string;
   liveDemoUrl?: string;
   featured: boolean;
-  displayOrder?: number;
 };
 
 export type SanityWorkExperience = {
