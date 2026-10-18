@@ -149,6 +149,7 @@ body {
 
 .site-header__experiment .site-header__link {
   color: #181614;
+  font-family: var(--font-chakra-petch), sans-serif;
   font-size: 0.95rem;
   font-weight: 900;
   letter-spacing: 0.08em;
@@ -184,7 +185,7 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
-  height: 1px;
+  height: 5px;
   background: var(--blue);
   content: "";
 }

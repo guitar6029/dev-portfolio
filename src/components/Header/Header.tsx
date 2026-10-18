@@ -26,6 +26,10 @@ export default function Header() {
     return pathname.startsWith(href);
   };
 
+  const activeIndex = NAV_ITEMS.findIndex(
+    (item) => item.kind === "route" && isActive(item.href),
+  );
+
   return (
     <header className="site-header">
       <div className="site-header__inner">
@@ -59,8 +63,8 @@ export default function Header() {
             className={`site-header__nav ${isMenuOpen ? "site-header__nav--open" : ""}`}
             aria-label="Primary navigation"
           >
-            {NAV_ITEMS.map((item) => {
-              const active = item.kind === "route" && isActive(item.href);
+            {NAV_ITEMS.map((item, index) => {
+              const active = item.kind === "route" && index === activeIndex;
 
               if (item.kind === "unavailable") {
                 return (
