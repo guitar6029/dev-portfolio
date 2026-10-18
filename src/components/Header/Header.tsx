@@ -29,10 +29,6 @@ export default function Header() {
   return (
     <header className="site-header">
       <div className="site-header__inner">
-        {/* <Link className="site-header__brand" href="/" aria-label="Josh Soll home">
-          <span>JOSH SOLL</span>
-          <small>SOFTWARE ENGINEER</small>
-        </Link> */}
 
         <button
           className="site-header__menu-button"
