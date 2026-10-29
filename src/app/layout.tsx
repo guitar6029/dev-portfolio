@@ -5,8 +5,8 @@ import { Analytics } from "@vercel/analytics/react";
 import { chakraPetch, exo2, robotoCondensed } from "./fonts";
 
 export const metadata: Metadata = {
-  title: "Josh Soll Portfolio",
-  description: "A portfolio site for Josh Soll",
+  title: "Josh Soll | Product Engineer",
+  description: "Josh Soll is a Product Engineer focused on frontend engineering, UI/UX, and full-stack product development.",
 };
 
 export default function RootLayout({

@@ -9,7 +9,6 @@ const NAV_ITEMS = [
   { href: "/", label: "Home", kind: "route" },
   { href: "/portfolio", label: "Work", kind: "route" },
   // { href: "/", label: "About", kind: "route" },
-  { href: "#", label: "Résumé", kind: "unavailable" },
   {
     href: "https://www.linkedin.com/in/joshsoll/",
     label: "Contact",
@@ -134,19 +133,6 @@ export default function Header() {
               </button>
               {NAV_ITEMS.map((item, index) => {
                 const active = item.kind === "route" && index === activeIndex;
-
-                if (item.kind === "unavailable") {
-                  return (
-                    <span
-                      key={item.label}
-                      className="site-header__link site-header__link--disabled"
-                      aria-disabled="true"
-                      title="Résumé destination is not configured"
-                    >
-                      {item.label}
-                    </span>
-                  );
-                }
 
                 const linkProps =
                   item.kind === "external"
