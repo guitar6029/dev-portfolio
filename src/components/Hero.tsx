@@ -5,13 +5,13 @@ export default function Hero() {
     <section className="framed-hero" aria-labelledby="hero-title">
       <div className="framed-hero__shell">
         <div className="framed-hero__copy">
-          <p className="framed-hero__label">Software / Interfaces / Systems</p>
+          <p className="framed-hero__label">Product / Interfaces / Systems</p>
           <h1 id="hero-title" className="framed-hero__title">
             <span>JOSH</span>
             <span>SOLL</span>
           </h1>
           <p className="framed-hero__role">
-            Software engineer designing calm, reliable interfaces for complex
+            Product Engineer designing calm, reliable interfaces for complex
             products.
           </p>
           <p className="framed-hero__body">
@@ -21,13 +21,6 @@ export default function Hero() {
             <Link className="framed-hero__button framed-hero__button--primary" href="/portfolio">
               View selected work <span aria-hidden="true">↗</span>
             </Link>
-            <span
-              className="framed-hero__button framed-hero__button--disabled"
-              aria-disabled="true"
-              title="Résumé destination is not configured"
-            >
-              Résumé
-            </span>
           </div>
         </div>
 

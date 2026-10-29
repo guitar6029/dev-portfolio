@@ -225,11 +225,6 @@ main {
   content: "";
 }
 
-.site-header__link--disabled {
-  cursor: not-allowed;
-  opacity: 0.5;
-}
-
 .site-header__menu-button {
   display: none;
   align-items: center;
@@ -391,11 +386,6 @@ main {
 
 .framed-hero__button--primary:hover {
   background: #eef0ec;
-}
-
-.framed-hero__button--disabled {
-  cursor: not-allowed;
-  opacity: 0.52;
 }
 
 /* Loading boundary */
