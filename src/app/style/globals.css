@@ -5,7 +5,7 @@
   --text: #e5e7ea;
   --text-muted: #98a0a8;
 
-  --blue: #4cb1ff;
+  --neon-pr: #7e55ee;
 }
 
 html {
@@ -164,7 +164,7 @@ main {
 .site-header__experiment-art {
   position: absolute;
   top: 50%;
-  left: 0;
+  left: 10%;
   z-index: 0;
   display: block;
   width: 70%;
@@ -222,7 +222,7 @@ main {
   bottom: 0;
   left: 0;
   height: 5px;
-  background: var(--blue);
+  background: var(--neon-pr);
   content: "";
 }
 
@@ -244,7 +244,7 @@ main {
 .site-header__link:focus-visible,
 .site-header__menu-button:focus-visible,
 .framed-hero__button:focus-visible {
-  outline: 2px solid var(--blue);
+  outline: 2px solid var(--neon-pr);
   outline-offset: 5px;
 }
 
