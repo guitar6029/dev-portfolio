@@ -167,7 +167,7 @@ main {
   left: 0;
   z-index: 0;
   display: block;
-  width: 100%;
+  width: 70%;
   max-width: none;
   height: auto;
   transform: translateY(-50%);
