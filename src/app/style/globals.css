@@ -178,8 +178,9 @@ main {
   position: relative;
   z-index: 1;
   justify-content: center;
+  width: 70%;
   height: 100%;
-  padding: 0 10%;
+  padding: 0 8%;
 }
 
 .site-header__experiment .site-header__link {
